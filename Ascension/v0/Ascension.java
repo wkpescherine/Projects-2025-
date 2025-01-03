@@ -1,32 +1,34 @@
-package Ascension.v0;
+package ascension.v0;
 
 import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 
-public class Ascension {
-    JFrame window = new JFrame("Ascension v0.1");
-    //Start start = new Start();
+public class Ascension implements ActionListener{
+    JFrame window = new JFrame("Ascension v0.2.1");
+    Start start = new Start();
     //Saved saved = new Saved();
     //Game game = new Game();
-    //CreateChar create = new CreateChar();
+    CreateChar create = new CreateChar();
 
     Ascension(){
-        //renderScreen();
+        renderScreen();
         // Can keep the sizes the same as it actually does go end to end
         // Can start to remove the different sections out
         // Will just use this as the main interface for the screen loading
 
         // START GAME SCREEN SWITCHIUNG
-        /*start.start.setBounds(0, 0, 1000, 750);
+        start.start.setBounds(0, 0, 1000, 750);
         start.begin.addActionListener(this);
-        start.saved.addActionListener(
-                new ActionListener() {
-                    public void actionPerformed(ActionEvent e) {
-                        GameConfig.state = "SAVE";
-                        renderScreen();
-                    }
-                });
-
+        //start.saved.addActionListener(
+        //        new ActionListener() {
+        //            public void actionPerformed(ActionEvent e) {
+        //                GameConfig.state = "SAVE";
+        //                renderScreen();
+        //            }
+        //        });
+        /* 
         // SAVED GANE SCREEN SWITCHING
         saved.saved.setBounds(0, 0, 1000, 750);
         saved.back.addActionListener(
@@ -43,7 +45,7 @@ public class Ascension {
                         renderScreen();
                     }
                 });
-
+        */
         // CREATECHAR SCREEN SWITCHING
         create.create.setBounds(0, 0, 1000, 750);
         create.play.addActionListener(
@@ -60,7 +62,7 @@ public class Ascension {
                         renderScreen();
                     }
                 });
-
+        /*
         // GAME SCREEN SWITCHING
         game.game.setBounds(0, 0, 1990, 750);
         game.exit.addActionListener(
@@ -71,9 +73,9 @@ public class Ascension {
                     }
                 });
         */
-        //window.add(start.start);
+        window.add(start.start);
         //window.add(saved.saved);
-        //window.add(create.create);
+        window.add(create.create);
         //window.add(game.game);
         window.setLayout(null);
         window.getContentPane().setBackground(Color.BLACK);
@@ -87,27 +89,27 @@ public class Ascension {
         Ascension ascension = new Ascension();
     }
 
-    /*public void renderScreen() {
+    public void renderScreen() {
         start.start.setVisible(false);
-        saved.saved.setVisible(false);
+        //saved.saved.setVisible(false);
         create.create.setVisible(false);
-        game.game.setVisible(false);
+        //game.game.setVisible(false);
         if (GameConfig.state.equals("MAIN")) {
             start.start.setVisible(true);
         }
-        if (GameConfig.state.equals("SAVE")) {
-            saved.saved.setVisible(true);
-        }
+        //if (GameConfig.state.equals("SAVE")) {
+        //    saved.saved.setVisible(true);
+        //}
         if (GameConfig.state.equals("CREATE")) {
             create.create.setVisible(true);
         }
-        if (GameConfig.state.equals("GAME")) {
-            game.game.setVisible(true);
-        }
-    }*/
+        //if (GameConfig.state.equals("GAME")) {
+        //    game.game.setVisible(true);
+        //}
+    }
 
-    //public void actionPerformed(ActionEvent e) {
-    //    GameConfig.state = "CREATE";
-    //    renderScreen();
-    //}
+    public void actionPerformed(ActionEvent e) {
+        GameConfig.state = "CREATE";
+        renderScreen();
+    }
 }
