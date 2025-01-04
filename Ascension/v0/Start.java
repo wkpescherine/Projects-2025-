@@ -29,7 +29,7 @@ public class Start {
         start.add(saved);
         //start.add(logo);
         start.setLayout(null);
-        // start.setBackground(Color.BLACK);
+        start.setBackground(Color.BLACK);
         start.setPreferredSize(new Dimension(1000, 750));
     }
 }

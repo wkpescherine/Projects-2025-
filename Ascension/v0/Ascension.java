@@ -6,10 +6,10 @@ import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 
 public class Ascension implements ActionListener{
-    JFrame window = new JFrame("Ascension v0.2.1");
+    JFrame window = new JFrame("Ascension v0.3.2");
     Start start = new Start();
-    //Saved saved = new Saved();
-    //Game game = new Game();
+    Saved saved = new Saved();
+    Game game = new Game();
     CreateChar create = new CreateChar();
 
     Ascension(){
@@ -21,14 +21,13 @@ public class Ascension implements ActionListener{
         // START GAME SCREEN SWITCHIUNG
         start.start.setBounds(0, 0, 1000, 750);
         start.begin.addActionListener(this);
-        //start.saved.addActionListener(
-        //        new ActionListener() {
-        //            public void actionPerformed(ActionEvent e) {
-        //                GameConfig.state = "SAVE";
-        //                renderScreen();
-        //            }
-        //        });
-        /* 
+        start.saved.addActionListener(
+                new ActionListener() {
+                    public void actionPerformed(ActionEvent e) {
+                        GameConfig.state = "SAVE";
+                        renderScreen();
+                    }
+                }); 
         // SAVED GANE SCREEN SWITCHING
         saved.saved.setBounds(0, 0, 1000, 750);
         saved.back.addActionListener(
@@ -45,7 +44,6 @@ public class Ascension implements ActionListener{
                         renderScreen();
                     }
                 });
-        */
         // CREATECHAR SCREEN SWITCHING
         create.create.setBounds(0, 0, 1000, 750);
         create.play.addActionListener(
@@ -74,9 +72,9 @@ public class Ascension implements ActionListener{
                 });
         */
         window.add(start.start);
-        //window.add(saved.saved);
+        window.add(saved.saved);
         window.add(create.create);
-        //window.add(game.game);
+        window.add(game.game);
         window.setLayout(null);
         window.getContentPane().setBackground(Color.BLACK);
         window.setSize(1000, 750);
@@ -91,21 +89,21 @@ public class Ascension implements ActionListener{
 
     public void renderScreen() {
         start.start.setVisible(false);
-        //saved.saved.setVisible(false);
+        saved.saved.setVisible(false);
         create.create.setVisible(false);
-        //game.game.setVisible(false);
+        game.game.setVisible(false);
         if (GameConfig.state.equals("MAIN")) {
             start.start.setVisible(true);
         }
-        //if (GameConfig.state.equals("SAVE")) {
-        //    saved.saved.setVisible(true);
-        //}
+        if (GameConfig.state.equals("SAVE")) {
+            saved.saved.setVisible(true);
+        }
         if (GameConfig.state.equals("CREATE")) {
             create.create.setVisible(true);
         }
-        //if (GameConfig.state.equals("GAME")) {
-        //    game.game.setVisible(true);
-        //}
+        if (GameConfig.state.equals("GAME")) {
+            game.game.setVisible(true);
+        }
     }
 
     public void actionPerformed(ActionEvent e) {
