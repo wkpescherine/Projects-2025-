@@ -1,3 +1,4 @@
+010425 Mercantus(0.1)  : Started to add basic skeleton of app
 010325 Ascension(0.3.7): Added Saved Screen
                          Added Game Screen
                          Start to build out the char create screen
@@ -5,5 +6,5 @@
 010225 Ascension(0.2.1): Added Start Screen
                          Added Char Create Screen
                          Added screen switching between screens
-010125 General:Basic setting up of new laptop
-       Ascension(0.1): Rebuilding game with refactoring
+010125 General         : Basic setting up of new laptop
+       Ascension(0.1)  : Rebuilding game with refactoring
