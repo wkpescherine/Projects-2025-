@@ -5,6 +5,7 @@ import {useNavigate} from 'react-router-dom'
 //import Users from "./usersDB.json"
 //import Docters from "./doctorDB.json"
 
+
 function Main() {
     const[logInUsername,setLogInUsername] = useState ("");
     const[logInPassword,setLogInPassword] = useState ("");
@@ -27,9 +28,7 @@ function Main() {
     //    navigate('./dcreate')
     //}
 
-    function RedirectToCreateAccount(){
-        navigate('./createAccount')
-    }
+    function RedirectToCreateAccount(){ navigate('./create')}
 
     //function RedirectUnderDev(){
     //    if((logInUsername === Users.username) && (logInPassword=== Users.password)){
@@ -53,7 +52,7 @@ function Main() {
                 <button class='invertButton' onClick={RedirectToDashboard}>Login</button> 
                 <button class='invertButton' onClick={RedirectToCreateAccount}>Create Account</button>
             </p>
-            <p>version 0.1</p>
+            <p>version 0.2</p>
         </div>
     ); 
 }

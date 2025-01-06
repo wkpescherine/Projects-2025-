@@ -13,6 +13,12 @@
   }
 }
 
+.invertButton {
+  background-color: #fff;
+  color:#000;
+  width: 120px;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
