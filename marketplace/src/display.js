@@ -1,8 +1,13 @@
 function Display(props) {
     return (
-        <div>
-            <div style={{justifyContent: "center", width: "300px"}}></div>
-            {props.sendData}
+        
+        <div style={{justifyContent: "center", 
+                     width: "400px",
+                     marginLeft:"10px", 
+                     backgroundColor:"#333", 
+                     paddingTop: "50px", 
+                     paddingBottom: "100%"}}>
+            <p>{props.sendData}</p>
         </div>
     ); 
 }

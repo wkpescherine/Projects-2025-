@@ -30,13 +30,13 @@ function Main() {
 
     function RedirectToCreateAccount(){ navigate('./create')}
 
-    //function RedirectUnderDev(){
-    //    if((logInUsername === Users.username) && (logInPassword=== Users.password)){
-    //        navigate('./dashboard')
-    //    }
-    //}
+    function RedirectUnderDev(){
+        if((logInUsername === "Test") && (logInPassword=== "Test@01")){
+            navigate('./dashboard')
+        }
+    }
 
-    function RedirectToDashboard(){ navigate('./dashboard')}
+    //function RedirectToDashboard(){ navigate('./dashboard')}
 
     return (
         <div>
@@ -49,10 +49,10 @@ function Main() {
                 <input class="inputField" type="password" placeholder="Enter password" onChange={handleLogInPasswordChange}></input>
             </p>
             <p>
-                <button class='invertButton' onClick={RedirectToDashboard}>Login</button> 
+                <button class='invertButton' onClick={RedirectUnderDev}>Login</button> 
                 <button class='invertButton' onClick={RedirectToCreateAccount}>Create Account</button>
             </p>
-            <p>version 0.2</p>
+            <p>version 0.3</p>
         </div>
     ); 
 }
