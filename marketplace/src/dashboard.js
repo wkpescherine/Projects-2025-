@@ -16,6 +16,7 @@ function Dashboard(){
     return (
         <div>
             <div style={{justifyContent: "center"}}>
+                <h1>Mercantus</h1>
                 <div style={{display:"flex", justifyContent: "center"}}>
                     <Sidebar getData={handleSectionChoices}/>
                     <Display sendData={section}/>

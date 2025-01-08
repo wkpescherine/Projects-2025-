@@ -6,6 +6,17 @@ p {
   color:#ffdf00;
 }
 
+h1 {
+  color:#ffdf00;
+  font-size: 24px;
+}
+
+label {
+  color: #ffdf00;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 body {
   background-color: #000;
 }
