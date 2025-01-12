@@ -52,7 +52,7 @@ function Main() {
                 <button class='invertButton' onClick={RedirectUnderDev}>Login</button> 
                 <button class='invertButton' onClick={RedirectToCreateAccount}>Create Account</button>
             </p>
-            <p>version 0.5</p>
+            <p>version 0.6</p>
         </div>
     ); 
 }

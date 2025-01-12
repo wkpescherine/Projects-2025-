@@ -1,3 +1,7 @@
+import Profile from "./profile"
+import Portfolio from "./portfolio"
+import Home from "./home"
+
 function Display(props) {
     return (
         
@@ -7,7 +11,9 @@ function Display(props) {
                      backgroundColor:"#333", 
                      paddingTop: "50px", 
                      paddingBottom: "100%"}}>
-            <p>{props.sendData}</p>
+            {props.sendData==="Home" && <Home/>}
+            {props.sendData==="Profile" && <Profile/>}
+            {props.sendData==="Portfolio" && <Portfolio/>}
         </div>
     ); 
 }
