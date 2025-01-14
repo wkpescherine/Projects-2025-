@@ -3,9 +3,12 @@ import ReactDOM from 'react-dom/client';
 import {useNavigate} from 'react-router-dom'
 import './index.css';
 
+import Create from "./create"
+
 function Title() {
     const[logInUsername,setLogInUsername] = useState ("");
     const[logInPassword,setLogInPassword] = useState ("");
+    const[createAccount,setCreateAccount] = useState (""); 
 
     let navigate = useNavigate();
     
@@ -17,7 +20,13 @@ function Title() {
         setLogInPassword(event.target.value)
     }
 
-    function RedirectToCreateAccount(){ navigate('./create')}
+    function RedirectToCreateAccount(){
+        if(createAccount === ""){
+            setCreateAccount("Create")
+        }else{
+            setCreateAccount("")
+        }
+    }
 
     function RedirectUnderDev(){
         if((logInUsername === "Test") && (logInPassword=== "Test@01")){
@@ -38,7 +47,10 @@ function Title() {
                 <button class='invertButton' onClick={RedirectUnderDev}>Login</button> 
                 <button class='invertButton' onClick={RedirectToCreateAccount}>Create Account</button>
             </p>
-            <p>version 0.1</p>
+            {
+                createAccount==="Create" && < Create/>
+            }
+            <p>version 0.2</p>
         </div>
     );
 }
