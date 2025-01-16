@@ -1,27 +1,22 @@
-import React, {useState} from 'react';
-import ReactDOM from 'react-dom/client';
-import {useNavigate} from 'react-router-dom'
+import React from 'react';
 import './index.css';
 
 import Window from "./windowport"
 import Action from "./actionport"
 import ActionBar from "./actionbar"
+import Char from "./charport"
 
 function Viewport(){
-    let navigate = useNavigate();
-
-    function RedirectToTitle(){ navigate('/')}
-
     return(
         <div style={{display:"flex", justifyContent: "center"}}>
             <div>
-                <h2>Viewport</h2>
-                <div style={{display: "flex", height: "350px"}}>
+                <h5>Barrens</h5>
+                <div style={{display: "flex", height: "450px"}}>
                     <Window />
                     <Action />
                 </div>
+                <Char />
                 <ActionBar />
-                <button class='invertButton' onClick={RedirectToTitle}>Exit</button>
             </div>
         </div>
     );   

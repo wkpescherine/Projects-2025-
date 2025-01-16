@@ -18,7 +18,7 @@ function Create (){
     }
     return(
         <div>
-            <div style={{display: "flex", justifyContent: "center"}}>
+            <div style={{justifyContent: "center"}}>
                 <p style={{padding: "3px"}}>
                     <input class="inputField" type="text" placeholder="Create New Username" onChange={handleNewUsernameChange}></input>
                 </p>
@@ -26,12 +26,12 @@ function Create (){
                     <input class="inputField" type="password" placeholder="Create New Password" onChange={handleNewPasswordChange}></input>
                 </p>
             </div>
-            <div style={{display: "flex", justifyContent: "center"}}>
+            <div style={{justifyContent: "center"}}>
                 <p style={{padding: "3px"}}>
                     <input class="inputField" type="text" placeholder="Enter Email" onChange={handleEmailChange}></input>
                 </p>
             </div>
-            <div style={{display: "flex", justifyContent: "center"}}>
+            <div style={{justifyContent: "center"}}>
                 <p style={{padding: "3px"}}>
                     <input class="inputField" type="text" placeholder="CC Number" onChange={handleEmailChange}></input>
                 </p>
@@ -42,24 +42,28 @@ function Create (){
                     <input class="inputField" type="text" placeholder="CSV" onChange={handleEmailChange}></input>
                 </p>
             </div>
-            <label>
-                <input type="radio" value="normal"/>1mo
-            </label>
-            <label>
-                <input type="radio" value="normal"/>2mos
-            </label>
-            <label>
-                <input type="radio" value="normal"/>3mos
-            </label>
-            <label>
-                <input type="radio" value="normal"/>4mos
-            </label>
-            <label>
-                <input type="radio" value="normal"/>6mos
-            </label>
-            <label>
-                <input type="radio" value="normal"/>12mos
-            </label>
+            <div>
+                <label style={{color:"#fff"}}>
+                    <input type="radio" value="normal"/>1mo
+                </label>
+                <label style={{color:"#fff"}}>
+                    <input type="radio" value="normal"/>2mos
+                </label>
+                <label style={{color:"#fff"}}>
+                    <input type="radio" value="normal"/>3mos
+                </label>
+            </div>
+            <div>
+                <label style={{color:"#fff"}}>
+                    <input type="radio" value="normal"/>4mos
+                </label>
+                <label style={{color:"#fff"}}>
+                    <input type="radio" value="normal"/>6mos
+                </label>
+                <label style={{color:"#fff"}}>
+                    <input type="radio" value="normal"/>12mos
+                </label>
+            </div>
         </div>
     )
 }

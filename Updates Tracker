@@ -1,3 +1,10 @@
+011425 Barren(0.4)     : General UI Updates
+                         Cleanup Title screen
+                         Added subRenewal section to Title Screen
+                         Added CHar view
+                         Updated Layout for Create Accounts
+                         Updated ALL ports and Action Bar
+                         Updated Action bar with various options
 011425 Barren(0.3)     : Added basic timer checkling for account
                          Added messaging to login
 011325 Barren(0.2)     : Added Creating account functionality

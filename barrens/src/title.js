@@ -4,14 +4,15 @@ import {useNavigate} from 'react-router-dom'
 import './index.css';
 
 import Create from "./create"
+import Renewal from "./renewSub"
 
 function Title() {
     const[logInUsername,setLogInUsername] = useState ("");
     const[logInPassword,setLogInPassword] = useState ("");
     const[createAccount,setCreateAccount] = useState ("");
     const[logInMessage,setLogInMessage] = useState("");
-    const[subDate,setSubDate] = useState (31);
     const[subMonth,setSubMonth] = useState (2);
+    const[subDate,setSubDate] = useState (31);
     const[subYear,setSubYear] = useState (2025);
 
     let navigate = useNavigate();
@@ -22,6 +23,11 @@ function Title() {
 
     const handleLogInPasswordChange = (event) => {
         setLogInPassword(event.target.value)
+    }
+
+    function redirectToRenewSub(){
+        setLogInMessage("Account subscription has expired")
+        setCreateAccount("Renew")
     }
 
     function RedirectToCreateAccount(){
@@ -39,15 +45,12 @@ function Title() {
         const currentMonth = current.getMonth();
         const currentYear = current.getFullYear();
         if (currentYear <= subYear){
-            console.log(currentYear)
             if(currentMonth <= subMonth){
-                console.log(currentMonth)
                 if(currentDate <= subDate){
-                    console.log(currentDate)
                     navigate('./viewport')
-                }
-            } else { RedirectToCreateAccount()}
-        }else( RedirectToCreateAccount() )
+                } else {redirectToRenewSub()}
+            } else { redirectToRenewSub()}
+        }else( redirectToRenewSub() )
     }
 
     function RedirectUnderDev(){
@@ -69,15 +72,26 @@ function Title() {
                 <input class="inputField" type="password" placeholder="Enter password" onChange={handleLogInPasswordChange}></input>
             </p>
             <p>
-                <button class='invertButton' onClick={RedirectUnderDev}>Login</button> 
-                <button class='invertButton' onClick={RedirectToCreateAccount}>Create Account</button>
+                <button onClick={RedirectUnderDev}>Login</button> 
+                <button onClick={RedirectToCreateAccount}>Create Account</button>
             </p>
-            {subMonth}{subDate}{subYear}
-            {logInMessage}
+            <h5>{logInMessage}</h5>
             {
                 createAccount==="Create" && < Create/>
             }
-            <p>version 0.3</p>
+            {
+                createAccount==="Renew" && <Renewal/>
+            }
+                        {
+                createAccount==="Create" && <button>Create</button>
+            }
+            {
+                createAccount==="Renew" && <button>Renew</button>
+            }
+            {
+                createAccount!=="" && <button>Clear</button>
+            }
+            <p>version 0.4</p>
         </div>
     );
 }
