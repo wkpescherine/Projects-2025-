@@ -33,4 +33,3 @@ public class Start {
         start.setPreferredSize(new Dimension(1000, 750));
     }
 }
-
