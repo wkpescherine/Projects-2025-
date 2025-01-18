@@ -1,7 +1,14 @@
-011525 Ascension(0.4)  : Added additional data points to char sheet
-                       : Added improved logic for handling the way data is resolved 
-                       : Added Handling button clicking for selections (290)
-011425 Barren(0.4)     : General UI Updates
+011725 Ascension(0.5.10) :Updated GameConfig sheet to handle creation choices
+                          Added Char Sheet section on creation screen
+                          Added Bonus Calculation in GameConfig section
+                          Added logic for handling selections and data updates on creation screen
+                          Added New Races to Creation screen
+                          Added new Roles to Creation screen
+                            > Have to look further at the bonus calculation as it breaks the UI
+011625 Ascension(0.4)  : Added additional data points to char sheet
+                         Added improved logic for handling the way data is resolved 
+                         Added Handling button clicking for selections (290)
+011525 Barren(0.4)     : General UI Updates
                          Cleanup Title screen
                          Added subRenewal section to Title Screen
                          Added CHar view
