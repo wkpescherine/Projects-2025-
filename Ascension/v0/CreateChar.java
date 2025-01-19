@@ -14,14 +14,20 @@ public class CreateChar implements ActionListener{
     JButton nimble = new JButton("Nimble");
     JButton human = new JButton("Human");
     JButton dwarven = new JButton("Dwarven");
+    JButton elven = new JButton("Elven");
     JButton warrior = new JButton("Warrior");
     JButton magi = new JButton("Magi");
+    JButton rogue = new JButton("Rogue");
     JPanel style = new JPanel();
     JPanel race = new JPanel();
     JPanel role = new JPanel();
-    JLabel sheetStr = new JLabel ("STR:");
-    JLabel sheetDex = new JLabel ("DEX:");
-    JLabel sheetQui = new JLabel ("QUI:");
+    JLabel styleRaceRole = new JLabel("");
+    JLabel sheetStr = new JLabel("STR:");
+    JLabel sheetDex = new JLabel("DEX:");
+    JLabel sheetQui = new JLabel("QUI:");
+    JLabel sheetInt = new JLabel("INT:");
+    JLabel sheetPie = new JLabel("PIE:");
+    JLabel sheetCon = new JLabel("CON:");
 
     String buttonName ="";
 
@@ -37,7 +43,8 @@ public class CreateChar implements ActionListener{
             new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     buttonName = ((JButton) e.getSource()).getText();
-                    GameConfig.handleStyleChocie(buttonName);
+                    GameConfig.handleStyleChoice(buttonName);
+                    GameConfig.style = buttonName;
                     updateSheet();
                 }
             }); 
@@ -45,7 +52,8 @@ public class CreateChar implements ActionListener{
             new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     buttonName = ((JButton) e.getSource()).getText();
-                    GameConfig.handleStyleChocie(buttonName);
+                    GameConfig.handleStyleChoice(buttonName);
+                    GameConfig.style = buttonName;
                     updateSheet();
                 }
             });
@@ -55,23 +63,94 @@ public class CreateChar implements ActionListener{
         race.setBounds(25,225,600,175);
         race.add(human);
         race.add(dwarven);
+        race.add(elven);
+        human.addActionListener(
+            new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    buttonName = ((JButton) e.getSource()).getText();
+                    GameConfig.handleRaceChoice(buttonName);
+                    GameConfig.race = buttonName;
+                    updateSheet();
+                }
+            });
+        dwarven.addActionListener(
+            new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    buttonName = ((JButton) e.getSource()).getText();
+                    GameConfig.handleRaceChoice(buttonName);
+                    GameConfig.race = buttonName;
+                    updateSheet();
+                }
+            });
+        elven.addActionListener(
+            new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    buttonName = ((JButton) e.getSource()).getText();
+                    GameConfig.handleRaceChoice(buttonName);
+                    GameConfig.race = buttonName;
+                    updateSheet();
+                }
+            });
 
         //Role Selection section
         role.setPreferredSize(new Dimension(600,250));
         role.setBounds(25,425,600,175);
         role.add(warrior);
         role.add(magi);
+        role.add(rogue);
+        warrior.addActionListener(
+            new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    buttonName = ((JButton) e.getSource()).getText();
+                    GameConfig.handleRoleChoice(buttonName);
+                    GameConfig.role = buttonName;
+                    updateSheet();
+                }
+            });
+        magi.addActionListener(
+            new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    buttonName = ((JButton) e.getSource()).getText();
+                    GameConfig.handleRoleChoice(buttonName);
+                    GameConfig.role = buttonName;
+                    updateSheet();
+                }
+            });
+        rogue.addActionListener(
+            new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    buttonName = ((JButton) e.getSource()).getText();
+                    GameConfig.handleRoleChoice(buttonName);
+                    GameConfig.role = buttonName;
+                    updateSheet();
+                }
+            });
 
         //Char stats sheet
+        styleRaceRole.setPreferredSize(new Dimension(200,25));
+        styleRaceRole.setBounds(650, 25,200,25);
+        styleRaceRole.setForeground(Color.WHITE);
         sheetStr.setPreferredSize(new Dimension(200,25));
-        sheetStr.setBounds(650, 25,200,25);
+        sheetStr.setBounds(650, 75,200,25);
         sheetStr.setForeground(Color.WHITE);
         sheetDex.setPreferredSize(new Dimension(200,25));
-        sheetDex.setBounds(650, 75,200,25);
+        sheetDex.setBounds(650, 125,200,25);
         sheetDex.setForeground(Color.WHITE);
         sheetQui.setPreferredSize(new Dimension(200,25));
-        sheetQui.setBounds(650, 125,200,25);
+        sheetQui.setBounds(650, 175,200,25);
         sheetQui.setForeground(Color.WHITE);
+        sheetInt.setPreferredSize(new Dimension(200,25));
+        sheetInt.setBounds(650, 225,200,25);
+        sheetInt.setForeground(Color.WHITE);
+        sheetPie.setPreferredSize(new Dimension(200,25));
+        sheetPie.setBounds(650, 275,200,25);
+        sheetPie.setForeground(Color.WHITE);
+        sheetCon.setPreferredSize(new Dimension(200,25));
+        sheetCon.setBounds(650, 325,200,25);
+        sheetCon.setForeground(Color.WHITE);
+
+
+
 
         //Panel Setup info
         exit.setPreferredSize(new Dimension(100, 50));
@@ -84,9 +163,13 @@ public class CreateChar implements ActionListener{
         create.add(role);
         create.add(play);
         create.add(exit);
+        create.add(styleRaceRole);
         create.add(sheetStr);
         create.add(sheetDex);
         create.add(sheetQui);
+        create.add(sheetInt);
+        create.add(sheetPie);
+        create.add(sheetCon);
         create.setLayout(null);
         create.setBackground(Color.BLACK);
         create.setPreferredSize(new Dimension(1000, 750));
@@ -94,20 +177,18 @@ public class CreateChar implements ActionListener{
 
     public void actionPerformed(ActionEvent e) {
         buttonName = ((JButton) e.getSource()).getText();
-        GameConfig.handleStyleChocie(buttonName);
+        GameConfig.handleStyleChoice(buttonName);
+        GameConfig.style = buttonName;
         updateSheet();
     }
 
-    //public void updateSheet(){
-    //    sheetStr.setText("STR: " + GameConfig.stats[0]);
-    //    sheetDex.setText("DEX: " + GameConfig.stats[1]);
-    //    sheetQui.setText("QUI: " + GameConfig.stats[2]);
-    //}
-
     public void updateSheet(){
+        styleRaceRole.setText(GameConfig.style + " "+GameConfig.race+" "+GameConfig.role);
         sheetStr.setText("STR: " + GameConfig.stats[0] + " + " + GameConfig.statBonus[0]);
         sheetDex.setText("DEX: " + GameConfig.stats[1] + " + " + GameConfig.statBonus[1]);
         sheetQui.setText("QUI: " + GameConfig.stats[2] + " + " + GameConfig.statBonus[2]);
+        sheetInt.setText("INT: " + GameConfig.stats[3] + " + " + GameConfig.statBonus[3]);
+        sheetPie.setText("PIE: " + GameConfig.stats[4] + " + " + GameConfig.statBonus[4]);
+        sheetCon.setText("CON: " + GameConfig.stats[5] + " + " + GameConfig.statBonus[5]);
     }
 }
-//64

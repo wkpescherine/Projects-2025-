@@ -12,7 +12,7 @@ public class GameConfig {
     public static int[] statBonus      = {0,0,0,0,0,0};
     public static int[] stats          = {0,0,0,0,0,0};
 
-    public static void handleStyleChocie(String choice){
+    public static void handleStyleChoice(String choice){
         switch (choice) {
             case "Savage":
                 int[] savageStyle = {3,1,2,0,0,0};
@@ -50,10 +50,43 @@ public class GameConfig {
                 raceTempValues = dwarvenRace;
                 statsTally();
                 //bonusCheck();
+                break;
+            case "Elven":
+                int [] elvenRace = {0,1,3,2,0,0};
+                raceTempValues = elvenRace;
+                statsTally();
+                //bonusCheck();
+                break;
             default:
                 throw new AssertionError();
         }
     }
+
+    public static void handleRoleChoice(String choiceRole){
+        switch (choiceRole) {
+            case "Warrior":
+                int [] warriorRole = {2,0,1,0,0,3};
+                roleTempValues = warriorRole;
+                statsTally();
+                //bonusCheck();
+                break;
+            case "Magi":
+                int [] magiRole = {0,1,2,3,0,0};
+                roleTempValues = magiRole;
+                statsTally();
+                //bonusCheck();
+                break;
+            case "Rogue":
+                int [] rogueRole = {0,3,3,0,0,0};
+                roleTempValues = rogueRole;
+                statsTally();
+                //bonusCheck();
+                break;
+            default:
+                throw new AssertionError();
+            }
+    }
+
 
     public static void statsTally(){
         for(int a = 0; a<=5; a++ ){
@@ -71,4 +104,3 @@ public class GameConfig {
         }
     }  
 }
-//35
