@@ -1,3 +1,5 @@
+011925 Ascension(0.7.12)  :Found issue on bonus calculation
+                            Bug: Have to look further at the bonus calculation, found issue
 011825 Ascension(0.6.4)  :Added more Races to GameConfig(481)
                           Added more Roles to GameConfig
                           Added more Races to Char Screen
