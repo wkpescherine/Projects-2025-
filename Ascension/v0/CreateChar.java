@@ -12,6 +12,9 @@ public class CreateChar implements ActionListener{
     JButton savage = new JButton("Savage");
     JButton wise = new JButton("Wise");
     JButton nimble = new JButton("Nimble");
+    JButton tough = new JButton("Tough");
+    JButton pious = new JButton("Pious");
+    JButton quick = new JButton("Quick");
     JButton human = new JButton("Human");
     JButton dwarven = new JButton("Dwarven");
     JButton elven = new JButton("Elven");
@@ -38,6 +41,9 @@ public class CreateChar implements ActionListener{
         style.add(savage);
         style.add(wise);
         style.add(nimble);
+        style.add(tough);
+        style.add(pious);
+        style.add(quick);
         savage.addActionListener(this);
         wise.addActionListener(
             new ActionListener() {
@@ -49,6 +55,33 @@ public class CreateChar implements ActionListener{
                 }
             }); 
         nimble.addActionListener(
+            new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    buttonName = ((JButton) e.getSource()).getText();
+                    GameConfig.handleStyleChoice(buttonName);
+                    GameConfig.style = buttonName;
+                    updateSheet();
+                }
+            });
+        tough.addActionListener(
+            new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    buttonName = ((JButton) e.getSource()).getText();
+                    GameConfig.handleStyleChoice(buttonName);
+                    GameConfig.style = buttonName;
+                    updateSheet();
+                }
+            });
+        pious.addActionListener(
+            new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    buttonName = ((JButton) e.getSource()).getText();
+                    GameConfig.handleStyleChoice(buttonName);
+                    GameConfig.style = buttonName;
+                    updateSheet();
+                }
+            });
+        quick.addActionListener(
             new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     buttonName = ((JButton) e.getSource()).getText();

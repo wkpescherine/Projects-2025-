@@ -20,15 +20,33 @@ public class GameConfig {
                 statsTally();
                 bonusCheck();
                 break;
+            case "Tough":
+                int[] toughStyle = {1,1,1,0,0,3};
+                styleTempValues = toughStyle;
+                statsTally();
+                bonusCheck();
+                break;
             case "Wise":
                 int[] wiseStyle = {0,1,2,3,0,0};
                 styleTempValues = wiseStyle;
                 statsTally();
                 bonusCheck();
                 break;
+            case "Pious":
+                int[] piousStyle = {0,1,1,1,3,0};
+                styleTempValues = piousStyle;
+                statsTally();
+                bonusCheck();
+                break;
             case "Nimble":
                 int[] nimbleStyle = {0,3,3,0,0,0};
                 styleTempValues = nimbleStyle;
+                statsTally();
+                bonusCheck();
+                break;
+            case "Quick":
+                int[] quickStyle = {0,2,4,0,0,0};
+                styleTempValues = quickStyle;
                 statsTally();
                 bonusCheck();
                 break;
@@ -96,33 +114,21 @@ public class GameConfig {
 
     public static void bonusCheck(){
         for(int b = 0; b <= 5; b++){
-            System.out.println(b);
-            //int locaStat = b;
+            int finalBonus = 0;
             int bonusTot = 0;
-            //int bonusVal = 0;
             int statCap = stats[b];
-            System.out.println(statCap);
-            for(int bon = 0; bonusTot <= statCap; bon +=1){
-                System.out.println("here");
+            for(int bon = 0; bonusTot <= statCap; ){
                 int statCheck = statCap;
-                int tempValue = bonusTot + bon;
-                if(tempValue < statCheck){ 
-                    System.out.println("here 2");
-                    bonusTot = tempValue;
+                int tempValueCheck = bonusTot + bon;
+                if(tempValueCheck <= statCheck){ 
+                    bonusTot = tempValueCheck;
+                    finalBonus = bon;
+                    bon++;
                 }else{
-                    statBonus[b]= bon;
+                    statBonus[b]= finalBonus;
+                    bonusTot = 9999999;
                 }
             }
-
-            //while(bonusTot < statCap){
-            //    statBonus[locaStat]= bonusVal;
-            //    System.out.println(bonusVal);
-            //    if(bonusTot < statCap){
-            //        bonusTot = bonusTot+bonusVal;
-            //        bonusVal += 1;
-            //    }
-            //}
         }
     }  
 }
-//108
