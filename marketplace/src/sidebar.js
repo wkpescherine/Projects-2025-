@@ -10,16 +10,20 @@ function Sidebar(props) {
     }
 
     return (
-        <div style={{justifyContent: "center", width: "200px", backgroundColor:"#333", paddingTop: "50px", paddingBottom: "100%"}}>
+        <div style={{justifyContent: "center", 
+                    width: "200px", 
+                    backgroundColor:"#333",
+                    paddingTop: "50px", 
+                    height: "500px"}}>
             <button class="invertButton" onClick={() => props.getData("Home")}>Home</button> 
             <br></br>
             <button class='invertButton' onClick={() => props.getData("Profile")}>Profile</button> 
             <br></br>
             <button class='invertButton' onClick={() => props.getData("Portfolio")}>Portfolio</button> 
             <br></br>
-            <button class='invertButton' onClick={() => props.getData("Markets")}>Markets</button> 
+            <button class='invertButton' onClick={() => props.getData("Market")}>Market</button> 
             <br></br>
-            <button class='invertButton' onClick={() => props.getData("Bank")}>Bank</button> 
+            <button class='invertButton' onClick={() => props.getData("Vault")}>Vault</button> 
             <br></br>
             <button class='invertButton' onClick={() => props.getData("Settings")}>Settings</button> 
             <br></br>

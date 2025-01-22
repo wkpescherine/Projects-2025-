@@ -65,12 +65,8 @@ function PCreate() {
                     <input style={{width:"125px", background:"#fff"}} type="text" placeholder="City"></input>
                     <label>State</label> 
                     <input style={{width:"25px", background:"#fff"}} type="text" placeholder="State"></input>
-                </div>
-                <div>
                     <label>Zip</label> 
                     <input style={{width:"50px", background:"#fff"}} type="text" placeholder="Zip Code"></input>
-                    <label>Cell#</label> 
-                    <input style={{width:"125px", background:"#fff"}} type="text" placeholder="(000)000-0000"  onChange={handleCellNumChange}></input>
                 </div>
                 <hr style={{background:"#ffdd00", height: "2px", width: "550px"}}/>
 

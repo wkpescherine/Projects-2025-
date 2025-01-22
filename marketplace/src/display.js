@@ -10,7 +10,7 @@ function Display(props) {
                      marginLeft:"10px", 
                      backgroundColor:"#333", 
                      paddingTop: "50px", 
-                     paddingBottom: "100%"}}>
+                     height: "500px"}}>
             {props.sendData==="Home" && <Home/>}
             {props.sendData==="Profile" && <Profile/>}
             {props.sendData==="Portfolio" && <Portfolio/>}
