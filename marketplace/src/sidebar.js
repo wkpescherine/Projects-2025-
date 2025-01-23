@@ -25,6 +25,8 @@ function Sidebar(props) {
             <br></br>
             <button class='invertButton' onClick={() => props.getData("Vault")}>Vault</button> 
             <br></br>
+            <button class='invertButton' onClick={() => props.getData("Bank")}>Bank</button> 
+            <br></br>
             <button class='invertButton' onClick={() => props.getData("Settings")}>Settings</button> 
             <br></br>
             <button class='invertButton' onClick={() => props.getData("About")}>About</button> 

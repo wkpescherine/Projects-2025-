@@ -1,6 +1,8 @@
 import Profile from "./profile"
 import Portfolio from "./portfolio"
 import Home from "./home"
+import Market from "./market"
+import Bank from "./bank"
 
 function Display(props) {
     return (
@@ -14,6 +16,8 @@ function Display(props) {
             {props.sendData==="Home" && <Home/>}
             {props.sendData==="Profile" && <Profile/>}
             {props.sendData==="Portfolio" && <Portfolio/>}
+            {props.sendData==="Market" && <Market />}
+            {props.sendData==="Bank" && <Bank />}
         </div>
     ); 
 }
