@@ -1,9 +1,32 @@
-from flask import Flask
+from flask import Flask, request, jsonify
+import os,re,datetime
+import db
+from models import Book
+
 app = Flask(__name__)
 
-@app.route('/')
-def hello_world():
-    return 'Hello World'
+# creates the database if non exists
+if not os.path.isfile('user.db'):
+    db.connect()
+
+def isValid(email):
+    regex = re.compile(r'([A-Za-z0-9]+[.-_])*[A-Za-z09]+@[A-Zaz0-9-]+(\.[A-Z|a-z{2,}])+')
+    if re.fullmatch(regex,email):
+        return True
+    else:
+        return False
+    
+@app.route("/request", methods =['POST'])
+def postRequest():
+    req_data = request.get_json()
+    email = req_data['email']
+    if not isValid(email):
+        return jsonify({
+            'status':'422',
+            'res':'failure',
+            'error': "Invalid email please enter a valid one"
+        })
+
 
 if __name__ == '__main__':
     app.run()

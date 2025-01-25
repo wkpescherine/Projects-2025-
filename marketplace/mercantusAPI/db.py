@@ -39,15 +39,32 @@ def insert(user):
 def view():
     conn = sqlite3.connect('users.db')
     cur = conn.cursor()
+    cur.execute("SELECT * FROM users")
+    rows = cur.fetchall()
+    users = []
+    for i in rows:
+        user = User(i[0], True if i[1]== 1 else False, i[2], i[3])
+        users.adppends(user)
+    conn.close()
+    return users
 
 def update(user):
     conn = sqlite3.connect('users.db')
     cur = conn.cursor()
+    cur.execute("UPDATE users SET username=?, password=?, email=? WHERE id=?", (user.username, user.password, user.email, user.id))
+    conn.commit()
+    conn.close()
 
 def delete(theID):
     conn = sqlite3.connect('users.db')
     cur = conn.cursor()
+    cur.execute("DELETE FROM users WHERE id=?", (theID))
+    conn.commit()
+    conn.close()
 
 def deleteAll():
     conn = sqlite3.connect('users.db')
     cur = conn.cursor()
+    cur.execute("DELETE FROM users")
+    conn.commit()
+    conn.close()
