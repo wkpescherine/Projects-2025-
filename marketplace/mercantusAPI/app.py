@@ -26,7 +26,14 @@ def postRequest():
             'res':'failure',
             'error': "Invalid email please enter a valid one"
         })
-
+    username = req_data['username']
+    usrs = [u.serialize() for u in db.view()]
+    for u in usrs:
+        if u['username'] == username:
+            return jsonify({
+                'res': f'Error no username',
+                'status':'404'
+            })
 
 if __name__ == '__main__':
     app.run()
