@@ -6,7 +6,7 @@ function Actionbar(){
     function RedirectToTitle(){ navigate('/')}
 
     return(
-        <div style={{width:"710px", height:"40px", background:"#999", margin:"5px"}}>
+        <div style={{width:"810px", height:"40px", background:"#999", margin:"5px"}}>
             <button style={{height:"35px", margin: "3px"}}>Home</button>
             <button style={{height:"35px", margin: "3px"}}>Char</button>
             <button style={{height:"35px", margin: "3px"}}>Inv</button>

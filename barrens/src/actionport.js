@@ -1,7 +1,9 @@
+import Home from "./home"
+
 function Actionport(){
     return(
-        <div style={{width:"350px", background:"#999", margin:"5px"}}>
-            <h3>Action</h3>
+        <div style={{width:"400px", background:"#999", margin:"5px"}}>
+            <Home />
         </div>
     );
 }

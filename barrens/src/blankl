@@ -1,0 +1,9 @@
+    const[homeView,setHomeView] = useState ("");
+
+    function setActionHomeView(viewChoosen){
+        setHomeView(viewChoosen)
+    }
+
+                {homeView === "create" && <CreateChar/>}
+    
+                <button style={{width: "100px"}} onClick={setActionHomeView("create")}>Create Character</button>
