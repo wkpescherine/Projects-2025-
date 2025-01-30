@@ -20,7 +20,7 @@ function Viewport(){
                 <h5>Barrens</h5>
                 <div style={{display: "flex", height: "450px"}}>
                     <Window />
-                    {actionBarSelection ==="home" && <Action />}
+                    {actionBarSelection ==="home" && <Action sendSelection={actionBarSelection} />}
                     
                 </div>
                 <Char />

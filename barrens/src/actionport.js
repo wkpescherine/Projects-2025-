@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Home from "./home"
 import Adventure from "./adventure"
 
-function Actionport(){
+function Actionport(props){
     const[actionPortView, setActionPortView] = useState("home") 
 
     const handleViewChange = (data) => {
