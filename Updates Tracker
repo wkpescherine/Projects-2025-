@@ -1,3 +1,8 @@
+013125 Ascension(0.9.2): Added more races to Char Creation
+                         Added more roles to Char creation
+                         Updated Game config for additional  data
+                         Updated Ganme COnfig with more char stats
+                         BUG: Issue with additional stast not calculating or showing
 013025 General         : NO UPDATES
 012925 Barren(0.8)     : Analyzing Action view logic and screen handling
 012825 Barren(0.7)     : Updated Action Bar
@@ -17,7 +22,7 @@
 012125 Mercantus(0.9)  : Updated Dashboard UI
                          Added Market Section
                          Added Bank Section
-012025 Ascension(0.8.11) :Resolved issue with Bonus Calculation(551)
+012025 Ascension(0.8.11) :Resolved issue with Bonus Calculation
                           Added more styles to Char Screen
                           Added more styles data to Game Config
 011925 Ascension(0.7.12) :Found issue on bonus calculation

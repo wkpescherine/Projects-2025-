@@ -18,9 +18,15 @@ public class CreateChar implements ActionListener{
     JButton human = new JButton("Human");
     JButton dwarven = new JButton("Dwarven");
     JButton elven = new JButton("Elven");
+    JButton kobold = new JButton("Kobold");
+    JButton ogre = new JButton("Ogre");
+    JButton draco = new JButton("Draco"); 
     JButton warrior = new JButton("Warrior");
     JButton magi = new JButton("Magi");
     JButton rogue = new JButton("Rogue");
+    JButton priest = new JButton("Priest");
+    JButton ranger = new JButton("Ranger");
+    JButton paladin = new JButton("Paladin");
     JPanel style = new JPanel();
     JPanel race = new JPanel();
     JPanel role = new JPanel();
@@ -31,13 +37,16 @@ public class CreateChar implements ActionListener{
     JLabel sheetInt = new JLabel("INT:");
     JLabel sheetPie = new JLabel("PIE:");
     JLabel sheetCon = new JLabel("CON:");
+    JLabel sheetPow = new JLabel("POW:");
+    JLabel sheetSpr = new JLabel("SPR:");
+    JLabel sheetHP = new JLabel("HP: ");
 
     String buttonName ="";
 
     CreateChar() {
         //Style selection section
-        style.setPreferredSize(new Dimension(600,250));
-        style.setBounds(25,25,600,175);
+        style.setPreferredSize(new Dimension(400,250));
+        style.setBounds(25,25,400,175);
         style.add(savage);
         style.add(wise);
         style.add(nimble);
@@ -92,11 +101,14 @@ public class CreateChar implements ActionListener{
             });
 
         //Race selection section
-        race.setPreferredSize(new Dimension(600,250));
-        race.setBounds(25,225,600,175);
+        race.setPreferredSize(new Dimension(400,250));
+        race.setBounds(25,225,400,175);
         race.add(human);
         race.add(dwarven);
         race.add(elven);
+        race.add(kobold);
+        race.add(ogre);
+        race.add(draco);
         human.addActionListener(
             new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
@@ -124,13 +136,43 @@ public class CreateChar implements ActionListener{
                     updateSheet();
                 }
             });
+        kobold.addActionListener(
+            new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    buttonName = ((JButton) e.getSource()).getText();
+                    GameConfig.handleRaceChoice(buttonName);
+                    GameConfig.race = buttonName;
+                    updateSheet();
+                }
+            });
+        ogre.addActionListener(
+            new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    buttonName = ((JButton) e.getSource()).getText();
+                    GameConfig.handleRaceChoice(buttonName);
+                    GameConfig.race = buttonName;
+                    updateSheet();
+                }
+            });
+        draco.addActionListener(
+            new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    buttonName = ((JButton) e.getSource()).getText();
+                    GameConfig.handleRaceChoice(buttonName);
+                    GameConfig.race = buttonName;
+                    updateSheet();
+                }
+            });
 
         //Role Selection section
-        role.setPreferredSize(new Dimension(600,250));
-        role.setBounds(25,425,600,175);
+        role.setPreferredSize(new Dimension(400,250));
+        role.setBounds(25,425,400,175);
         role.add(warrior);
         role.add(magi);
         role.add(rogue);
+        role.add(paladin);
+        role.add(priest);
+        role.add(ranger);
         warrior.addActionListener(
             new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
@@ -150,6 +192,33 @@ public class CreateChar implements ActionListener{
                 }
             });
         rogue.addActionListener(
+            new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    buttonName = ((JButton) e.getSource()).getText();
+                    GameConfig.handleRoleChoice(buttonName);
+                    GameConfig.role = buttonName;
+                    updateSheet();
+                }
+            });
+        paladin.addActionListener(
+            new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    buttonName = ((JButton) e.getSource()).getText();
+                    GameConfig.handleRoleChoice(buttonName);
+                    GameConfig.role = buttonName;
+                    updateSheet();
+                }
+            });
+        ranger.addActionListener(
+            new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    buttonName = ((JButton) e.getSource()).getText();
+                    GameConfig.handleRoleChoice(buttonName);
+                    GameConfig.role = buttonName;
+                    updateSheet();
+                }
+            });
+        priest.addActionListener(
             new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     buttonName = ((JButton) e.getSource()).getText();
@@ -181,6 +250,15 @@ public class CreateChar implements ActionListener{
         sheetCon.setPreferredSize(new Dimension(200,25));
         sheetCon.setBounds(650, 325,200,25);
         sheetCon.setForeground(Color.WHITE);
+        sheetPow.setPreferredSize(new Dimension(200,25));
+        sheetPow.setBounds(650, 375,200,25);
+        sheetPow.setForeground(Color.WHITE);
+        sheetSpr.setPreferredSize(new Dimension(200,25));
+        sheetSpr.setBounds(650, 425,200,25);
+        sheetSpr.setForeground(Color.WHITE);
+        sheetHP.setPreferredSize(new Dimension(200,25));
+        sheetHP.setBounds(650, 475,200,25);
+        sheetHP.setForeground(Color.WHITE);
 
 
 
@@ -203,6 +281,9 @@ public class CreateChar implements ActionListener{
         create.add(sheetInt);
         create.add(sheetPie);
         create.add(sheetCon);
+        create.add(sheetPow);
+        create.add(sheetSpr);
+        create.add(sheetHP);
         create.setLayout(null);
         create.setBackground(Color.BLACK);
         create.setPreferredSize(new Dimension(1000, 750));
@@ -223,5 +304,8 @@ public class CreateChar implements ActionListener{
         sheetInt.setText("INT: " + GameConfig.stats[3] + " + " + GameConfig.statBonus[3]);
         sheetPie.setText("PIE: " + GameConfig.stats[4] + " + " + GameConfig.statBonus[4]);
         sheetCon.setText("CON: " + GameConfig.stats[5] + " + " + GameConfig.statBonus[5]);
+        sheetCon.setText("POW: " + GameConfig.stats[6]);
+        sheetCon.setText("SPR: " + GameConfig.stats[7]);
+        sheetCon.setText("HP : " + GameConfig.stats[8]);
     }
-}
+}//227
