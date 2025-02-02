@@ -30,7 +30,9 @@ public class CreateChar implements ActionListener{
     JPanel style = new JPanel();
     JPanel race = new JPanel();
     JPanel role = new JPanel();
+    JPanel skills = new JPanel();
     JLabel styleRaceRole = new JLabel("");
+    JLabel skillsTitle = new JLabel("Skills");
     JLabel sheetStr = new JLabel("STR:");
     JLabel sheetDex = new JLabel("DEX:");
     JLabel sheetQui = new JLabel("QUI:");
@@ -228,6 +230,14 @@ public class CreateChar implements ActionListener{
                 }
             });
 
+        //skills selection section
+        skills.setPreferredSize(new Dimension(150,550));
+        skills.setBounds(450, 25,150,550);
+        skills.setForeground(Color.WHITE);
+        skillsTitle.setPreferredSize(new Dimension(50,25));
+        skillsTitle.setBounds(50, 25,50,550);
+        skills.add(skillsTitle);
+
         //Char stats sheet
         styleRaceRole.setPreferredSize(new Dimension(200,25));
         styleRaceRole.setBounds(650, 25,200,25);
@@ -284,6 +294,7 @@ public class CreateChar implements ActionListener{
         create.add(sheetPow);
         create.add(sheetSpr);
         create.add(sheetHP);
+        create.add(skills);
         create.setLayout(null);
         create.setBackground(Color.BLACK);
         create.setPreferredSize(new Dimension(1000, 750));
@@ -304,8 +315,8 @@ public class CreateChar implements ActionListener{
         sheetInt.setText("INT: " + GameConfig.stats[3] + " + " + GameConfig.statBonus[3]);
         sheetPie.setText("PIE: " + GameConfig.stats[4] + " + " + GameConfig.statBonus[4]);
         sheetCon.setText("CON: " + GameConfig.stats[5] + " + " + GameConfig.statBonus[5]);
-        sheetCon.setText("POW: " + GameConfig.stats[6]);
-        sheetCon.setText("SPR: " + GameConfig.stats[7]);
-        sheetCon.setText("HP : " + GameConfig.stats[8]);
+        sheetPow.setText("POW: " + GameConfig.stats[6]);
+        sheetSpr.setText("SPR: " + GameConfig.stats[7]);
+        sheetHP.setText("HP : " + GameConfig.stats[8]);
     }
-}//227
+}

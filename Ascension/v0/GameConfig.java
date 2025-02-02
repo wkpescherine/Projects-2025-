@@ -89,6 +89,12 @@ public class GameConfig {
                 statsTally();
                 bonusCheck();
                 break;
+            case "Draco":
+                int [] dracoRace = {3,0,0,0,0,3,5,5,12};
+                raceTempValues = dracoRace;
+                statsTally();
+                bonusCheck();
+                break;
             default:
                 throw new AssertionError();
         }
@@ -163,4 +169,4 @@ public class GameConfig {
             }
         }
     }  
-}//128
+}
