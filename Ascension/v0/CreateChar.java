@@ -6,6 +6,8 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 
 public class CreateChar implements ActionListener{
+    SkillSelection skillselection = new SkillSelection();
+
     JPanel create = new JPanel();
     JButton play = new JButton("Play");
     JButton exit = new JButton("Exit");
@@ -42,6 +44,7 @@ public class CreateChar implements ActionListener{
     JLabel sheetPow = new JLabel("POW:");
     JLabel sheetSpr = new JLabel("SPR:");
     JLabel sheetHP = new JLabel("HP: ");
+    JLabel sheetSkills = new JLabel("SKL:");
 
     String buttonName ="";
 
@@ -234,9 +237,12 @@ public class CreateChar implements ActionListener{
         skills.setPreferredSize(new Dimension(150,550));
         skills.setBounds(450, 25,150,550);
         skills.setForeground(Color.WHITE);
+        skillselection.skillselection.setPreferredSize(new Dimension(150,550));
+        skills.setBounds(450, 25,150,550);
         skillsTitle.setPreferredSize(new Dimension(50,25));
         skillsTitle.setBounds(50, 25,50,550);
         skills.add(skillsTitle);
+        skills.add(skillselection.skillselection);
 
         //Char stats sheet
         styleRaceRole.setPreferredSize(new Dimension(200,25));
@@ -269,9 +275,9 @@ public class CreateChar implements ActionListener{
         sheetHP.setPreferredSize(new Dimension(200,25));
         sheetHP.setBounds(650, 475,200,25);
         sheetHP.setForeground(Color.WHITE);
-
-
-
+        sheetSkills.setPreferredSize(new Dimension(200,25));
+        sheetSkills.setBounds(650, 525,200,25);
+        sheetSkills.setForeground(Color.WHITE);
 
         //Panel Setup info
         exit.setPreferredSize(new Dimension(100, 50));
@@ -294,6 +300,7 @@ public class CreateChar implements ActionListener{
         create.add(sheetPow);
         create.add(sheetSpr);
         create.add(sheetHP);
+        create.add(sheetSkills);
         create.add(skills);
         create.setLayout(null);
         create.setBackground(Color.BLACK);
@@ -308,6 +315,7 @@ public class CreateChar implements ActionListener{
     }
 
     public void updateSheet(){
+        skillselection.checkSkillsAvaialable();
         styleRaceRole.setText(GameConfig.style + " "+GameConfig.race+" "+GameConfig.role);
         sheetStr.setText("STR: " + GameConfig.stats[0] + " + " + GameConfig.statBonus[0]);
         sheetDex.setText("DEX: " + GameConfig.stats[1] + " + " + GameConfig.statBonus[1]);
@@ -318,5 +326,6 @@ public class CreateChar implements ActionListener{
         sheetPow.setText("POW: " + GameConfig.stats[6]);
         sheetSpr.setText("SPR: " + GameConfig.stats[7]);
         sheetHP.setText("HP : " + GameConfig.stats[8]);
+        sheetSkills.setText("SKL: " + GameConfig.skills);
     }
 }

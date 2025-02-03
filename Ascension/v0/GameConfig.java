@@ -13,6 +13,7 @@ public class GameConfig {
     public static int[] roleTempValues = {0,0,0,0,0,0,0,0,0};
     public static int[] statBonus      = {0,0,0,0,0,0,0,0,0};
     public static int[] stats          = {0,0,0,0,0,0,0,0,0};
+    public static String skills        = "";
 
     public static void handleStyleChoice(String choice){
         switch (choice) {
