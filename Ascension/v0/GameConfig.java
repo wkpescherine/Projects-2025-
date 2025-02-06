@@ -1,5 +1,9 @@
 package ascension.v0;
 
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import javax.swing.*;
+
 public class GameConfig {
     public static String state = "MAIN";
     public static String name ="";
@@ -13,7 +17,24 @@ public class GameConfig {
     public static int[] roleTempValues = {0,0,0,0,0,0,0,0,0};
     public static int[] statBonus      = {0,0,0,0,0,0,0,0,0};
     public static int[] stats          = {0,0,0,0,0,0,0,0,0};
-    public static String skills        = "";
+    public static String skills        = "Blank";
+
+    public static JPanel charsheet = new JPanel();
+    public static JLabel skillchoice = new JLabel("SKIL: ");
+
+    GameConfig(){
+        charsheet.setLayout(new FlowLayout());
+        charsheet.setPreferredSize(new Dimension(200, 500));
+        charsheet.setBounds(650, 75,200,500);
+        charsheet.add(skillchoice);
+        //sheetStr.setPreferredSize(new Dimension(200,25));
+        //sheetStr.setBounds(650, 75,200,25);
+    }
+
+    public static void handleCharSheet(){
+        skillchoice.setText("SKL: " + skills);
+    
+    }
 
     public static void handleStyleChoice(String choice){
         switch (choice) {

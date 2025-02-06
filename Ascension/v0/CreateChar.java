@@ -8,6 +8,8 @@ import javax.swing.*;
 public class CreateChar implements ActionListener{
     SkillSelection skillselection = new SkillSelection();
 
+    GameConfig config = new GameConfig();
+
     JPanel create = new JPanel();
     JButton play = new JButton("Play");
     JButton exit = new JButton("Exit");
@@ -302,6 +304,7 @@ public class CreateChar implements ActionListener{
         create.add(sheetHP);
         create.add(sheetSkills);
         create.add(skills);
+        create.add(config.charsheet);
         create.setLayout(null);
         create.setBackground(Color.BLACK);
         create.setPreferredSize(new Dimension(1000, 750));

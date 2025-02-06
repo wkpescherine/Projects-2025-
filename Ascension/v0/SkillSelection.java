@@ -13,6 +13,8 @@ public class SkillSelection implements ActionListener{
     JButton heal1 = new JButton("Heal I");
     JButton impcrit1 = new JButton("Imp Crit I"); 
 
+    //CreateChar creation = new CreateChar();
+
     SkillSelection(){
         hideAllSkills();
         //skillselector.add(exit);
@@ -71,5 +73,6 @@ public class SkillSelection implements ActionListener{
 
     public void actionPerformed(ActionEvent e) {
         GameConfig.skills = "Slash I";
+        GameConfig.handleCharSheet();
     }
 }

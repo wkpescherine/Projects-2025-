@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 
 public class Ascension implements ActionListener{
-    JFrame window = new JFrame("Ascension v0.11.3");
+    JFrame window = new JFrame("Ascension v0.12.0");
     Start start = new Start();
     Saved saved = new Saved();
     Game game = new Game();
