@@ -52,7 +52,7 @@ public class CreateChar implements ActionListener{
 
     CreateChar() {
         //Style selection section
-        style.setPreferredSize(new Dimension(400,250));
+        style.setPreferredSize(new Dimension(400,175));
         style.setBounds(25,25,400,175);
         style.add(savage);
         style.add(wise);
@@ -108,7 +108,7 @@ public class CreateChar implements ActionListener{
             });
 
         //Race selection section
-        race.setPreferredSize(new Dimension(400,250));
+        race.setPreferredSize(new Dimension(400,175));
         race.setBounds(25,225,400,175);
         race.add(human);
         race.add(dwarven);
@@ -172,7 +172,7 @@ public class CreateChar implements ActionListener{
             });
 
         //Role Selection section
-        role.setPreferredSize(new Dimension(400,250));
+        role.setPreferredSize(new Dimension(400,175));
         role.setBounds(25,425,400,175);
         role.add(warrior);
         role.add(magi);
@@ -236,11 +236,11 @@ public class CreateChar implements ActionListener{
             });
 
         //skills selection section
-        skills.setPreferredSize(new Dimension(150,550));
-        skills.setBounds(450, 25,150,550);
+        skills.setPreferredSize(new Dimension(150,575));
+        skills.setBounds(450, 25,150,575);
         skills.setForeground(Color.WHITE);
-        skillselection.skillselection.setPreferredSize(new Dimension(150,550));
-        skills.setBounds(450, 25,150,550);
+        skillselection.skillselection.setPreferredSize(new Dimension(150,575));
+        skills.setBounds(450, 25,150,575);
         skillsTitle.setPreferredSize(new Dimension(50,25));
         skillsTitle.setBounds(50, 25,50,550);
         skills.add(skillsTitle);

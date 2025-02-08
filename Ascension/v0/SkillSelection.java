@@ -7,38 +7,37 @@ import javax.swing.*;
 
 public class SkillSelection implements ActionListener{
     JPanel skillselection = new JPanel();
-    //JButton testButt = new JButton("Test Button");
     JButton slash1 = new JButton("Slash I");
     JButton spark1 = new JButton("Spark I");
     JButton heal1 = new JButton("Heal I");
     JButton impcrit1 = new JButton("Imp Crit I"); 
 
-    //CreateChar creation = new CreateChar();
-
     SkillSelection(){
         hideAllSkills();
-        //skillselector.add(exit);
         skillselection.setLayout(new FlowLayout());
-        skillselection.setPreferredSize(new Dimension(150, 500));
-        //skillsSelector.setBounds(450, 325, 100, 50);
+        skillselection.setPreferredSize(new Dimension(150, 300));
 
         slash1.addActionListener(this);
         spark1.addActionListener(
             new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     GameConfig.skills = "Spark I";
+                    GameConfig.handleCharSheet();
                 }
             }); 
         heal1.addActionListener(
             new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
-                    GameConfig.skills = "Spark I";
+                    GameConfig.skills = "Heal I";
+                    GameConfig.handleCharSheet();
                 }
             }); 
         impcrit1.addActionListener(
             new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
-                    GameConfig.skills = "Spark I";
+                    GameConfig.skills = "Imp Crit I";
+                    GameConfig.handleCharSheet();
+
                 }
             }); 
 

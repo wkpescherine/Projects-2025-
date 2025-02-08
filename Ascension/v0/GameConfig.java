@@ -17,15 +17,15 @@ public class GameConfig {
     public static int[] roleTempValues = {0,0,0,0,0,0,0,0,0};
     public static int[] statBonus      = {0,0,0,0,0,0,0,0,0};
     public static int[] stats          = {0,0,0,0,0,0,0,0,0};
-    public static String skills        = "Blank";
+    public static String skills        = "";
 
     public static JPanel charsheet = new JPanel();
     public static JLabel skillchoice = new JLabel("SKIL: ");
 
     GameConfig(){
         charsheet.setLayout(new FlowLayout());
-        charsheet.setPreferredSize(new Dimension(200, 500));
-        charsheet.setBounds(650, 75,200,500);
+        charsheet.setPreferredSize(new Dimension(200, 75));
+        charsheet.setBounds(650, 575,200,75);
         charsheet.add(skillchoice);
         //sheetStr.setPreferredSize(new Dimension(200,25));
         //sheetStr.setBounds(650, 75,200,25);
@@ -129,36 +129,48 @@ public class GameConfig {
                 roleTempValues = warriorRole;
                 statsTally();
                 bonusCheck();
+                skills = "";
+                handleCharSheet();
                 break;
             case "Magi":
                 int [] magiRole = {0,1,2,3,0,0,10,0,10};
                 roleTempValues = magiRole;
                 statsTally();
                 bonusCheck();
+                skills = "";
+                handleCharSheet();
                 break;
             case "Rogue":
                 int [] rogueRole = {0,3,3,0,0,0,0,0,15};
                 roleTempValues = rogueRole;
                 statsTally();
                 bonusCheck();
+                skills = "";
+                handleCharSheet();
                 break;
             case "Paladin":
                 int [] paladinRole = {2,0,0,0,2,2,0,5,15};
                 roleTempValues = paladinRole;
                 statsTally();
                 bonusCheck();
+                skills = "";
+                handleCharSheet();
                 break;
             case "Priest":
                 int [] priestRole = {0,1,1,0,4,0,0,10,10};
                 roleTempValues = priestRole;
                 statsTally();
                 bonusCheck();
+                skills = "";
+                handleCharSheet();
                 break;
             case "Ranger":
                 int [] rangerRole = {1,2,3,0,0,1,0,3,10};
                 roleTempValues = rangerRole;
                 statsTally();
                 bonusCheck();
+                skills = "";
+                handleCharSheet();
                 break;
             default:
                 throw new AssertionError();
