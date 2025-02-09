@@ -31,6 +31,7 @@ public class CreateChar implements ActionListener{
     JButton priest = new JButton("Priest");
     JButton ranger = new JButton("Ranger");
     JButton paladin = new JButton("Paladin");
+    JTextField charName = new JTextField();
     JPanel style = new JPanel();
     JPanel race = new JPanel();
     JPanel role = new JPanel();
@@ -46,9 +47,10 @@ public class CreateChar implements ActionListener{
     JLabel sheetPow = new JLabel("POW:");
     JLabel sheetSpr = new JLabel("SPR:");
     JLabel sheetHP = new JLabel("HP: ");
-    JLabel sheetSkills = new JLabel("SKL:");
+    //JLabel sheetSkills = new JLabel("SKL:");
 
     String buttonName ="";
+    String nameChar = charName.getText();
 
     CreateChar() {
         //Style selection section
@@ -247,39 +249,41 @@ public class CreateChar implements ActionListener{
         skills.add(skillselection.skillselection);
 
         //Char stats sheet
+        charName.setPreferredSize(new Dimension(125,25));
+        charName.setBounds(650, 25,125,25);
         styleRaceRole.setPreferredSize(new Dimension(200,25));
-        styleRaceRole.setBounds(650, 25,200,25);
+        styleRaceRole.setBounds(650, 50,200,25);
         styleRaceRole.setForeground(Color.WHITE);
         sheetStr.setPreferredSize(new Dimension(200,25));
         sheetStr.setBounds(650, 75,200,25);
         sheetStr.setForeground(Color.WHITE);
         sheetDex.setPreferredSize(new Dimension(200,25));
-        sheetDex.setBounds(650, 125,200,25);
+        sheetDex.setBounds(650, 100,200,25);
         sheetDex.setForeground(Color.WHITE);
         sheetQui.setPreferredSize(new Dimension(200,25));
-        sheetQui.setBounds(650, 175,200,25);
+        sheetQui.setBounds(650, 125,200,25);
         sheetQui.setForeground(Color.WHITE);
         sheetInt.setPreferredSize(new Dimension(200,25));
-        sheetInt.setBounds(650, 225,200,25);
+        sheetInt.setBounds(650, 150,200,25);
         sheetInt.setForeground(Color.WHITE);
         sheetPie.setPreferredSize(new Dimension(200,25));
-        sheetPie.setBounds(650, 275,200,25);
+        sheetPie.setBounds(650, 175,200,25);
         sheetPie.setForeground(Color.WHITE);
         sheetCon.setPreferredSize(new Dimension(200,25));
-        sheetCon.setBounds(650, 325,200,25);
+        sheetCon.setBounds(650, 200,200,25);
         sheetCon.setForeground(Color.WHITE);
         sheetPow.setPreferredSize(new Dimension(200,25));
-        sheetPow.setBounds(650, 375,200,25);
+        sheetPow.setBounds(650, 225,200,25);
         sheetPow.setForeground(Color.WHITE);
         sheetSpr.setPreferredSize(new Dimension(200,25));
-        sheetSpr.setBounds(650, 425,200,25);
+        sheetSpr.setBounds(650, 250,200,25);
         sheetSpr.setForeground(Color.WHITE);
         sheetHP.setPreferredSize(new Dimension(200,25));
-        sheetHP.setBounds(650, 475,200,25);
+        sheetHP.setBounds(650, 275,200,25);
         sheetHP.setForeground(Color.WHITE);
-        sheetSkills.setPreferredSize(new Dimension(200,25));
-        sheetSkills.setBounds(650, 525,200,25);
-        sheetSkills.setForeground(Color.WHITE);
+        //sheetSkills.setPreferredSize(new Dimension(200,25));
+        //sheetSkills.setBounds(650, 275,200,25);
+        //sheetSkills.setForeground(Color.WHITE);
 
         //Panel Setup info
         exit.setPreferredSize(new Dimension(100, 50));
@@ -292,6 +296,7 @@ public class CreateChar implements ActionListener{
         create.add(role);
         create.add(play);
         create.add(exit);
+        create.add(charName);
         create.add(styleRaceRole);
         create.add(sheetStr);
         create.add(sheetDex);
@@ -302,7 +307,7 @@ public class CreateChar implements ActionListener{
         create.add(sheetPow);
         create.add(sheetSpr);
         create.add(sheetHP);
-        create.add(sheetSkills);
+        //create.add(sheetSkills);
         create.add(skills);
         create.add(config.charsheet);
         create.setLayout(null);
@@ -329,6 +334,6 @@ public class CreateChar implements ActionListener{
         sheetPow.setText("POW: " + GameConfig.stats[6]);
         sheetSpr.setText("SPR: " + GameConfig.stats[7]);
         sheetHP.setText("HP : " + GameConfig.stats[8]);
-        sheetSkills.setText("SKL: " + GameConfig.skills);
+        //sheetSkills.setText("SKL: " + GameConfig.skills);
     }
 }

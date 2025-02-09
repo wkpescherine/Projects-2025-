@@ -12,11 +12,15 @@ public class GameConfig {
     public static String role = "";
     //Basic stats by array location
     //str, dex, qui, int, pie, con, pow, spr , hp
-    public static int[] styleTempValues= {0,0,0,0,0,0,0,0,0};
-    public static int[] raceTempValues = {0,0,0,0,0,0,0,0,0};
-    public static int[] roleTempValues = {0,0,0,0,0,0,0,0,0};
-    public static int[] statBonus      = {0,0,0,0,0,0,0,0,0};
-    public static int[] stats          = {0,0,0,0,0,0,0,0,0};
+    public static int[]  styleTempValues= {0,0,0,0,0,0,0,0,0};
+    public static int[]  raceTempValues = {0,0,0,0,0,0,0,0,0};
+    public static int[]  roleTempValues = {0,0,0,0,0,0,0,0,0};
+    public static int[]  statBonus      = {0,0,0,0,0,0,0,0,0};
+    public static int[]  stats          = {0,0,0,0,0,0,0,0,0};
+    public static int    level          = 1;
+    public static int    skillpts       = 0;
+    public static int    exp            = 0;
+    public static int    nextLevelXp    = 1000;
     public static String skills        = "";
 
     public static JPanel charsheet = new JPanel();
@@ -25,7 +29,7 @@ public class GameConfig {
     GameConfig(){
         charsheet.setLayout(new FlowLayout());
         charsheet.setPreferredSize(new Dimension(200, 75));
-        charsheet.setBounds(650, 575,200,75);
+        charsheet.setBounds(650, 300,200,75);
         charsheet.add(skillchoice);
         //sheetStr.setPreferredSize(new Dimension(200,25));
         //sheetStr.setBounds(650, 75,200,25);
