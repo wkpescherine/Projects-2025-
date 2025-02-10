@@ -1,21 +1,34 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import './App.css';
 import {useNavigate} from 'react-router-dom'
+import MyContext from './myContext';
 
 function PCreate() {
     const[logInUsername,setLogInUsername] = useState ("");
     const[logInPassword,setLogInPassword] = useState ("");
+    const[logInEmail,setLogInEmail] = useState ("");
     const[pcAddresss,setPCAddress] = useState("");
     const[cellNum, setCellNum]= useState("");
+
+    const {globalVarUsername, setGlobalVarUsername} = useContext(MyContext);
+    const {globalVarPassword, setGlobalVarPassword} = useContext(MyContext);
+    const {globalVarEmail, setGlobalVarEmail} = useContext(MyContext);
 
     let navigate = useNavigate();
     
     const handleLogInUsernameChange = (event) => {
         setLogInUsername(event.target.value)
+        setGlobalVarUsername(logInUsername)
     }
 
     const handleLogInPasswordChange = (event) => {
         setLogInPassword(event.target.value)
+        setGlobalVarPassword(logInPassword)
+    }
+
+    const handleLogInEmailChange = (event) => {
+        setLogInEmail(event.target.value)
+        setGlobalVarEmail(logInEmail)
     }
 
     const handleCellNumChange = (event) => {
@@ -27,6 +40,7 @@ function PCreate() {
     }
 
     function RedirectToDashboard(){
+        console.log(globalVarUsername)
         navigate('/dashboard')
     }
     
@@ -49,7 +63,7 @@ function PCreate() {
             </div>
             <div>
                 <label style={{marginLeft:"35px"}}>Email</label>
-                <input type="text" placeholder="Enter password" class="inputData100" onChange={handleLogInPasswordChange}></input>
+                <input type="text" placeholder="Enter password" class="inputData100" onChange={handleLogInEmailChange}></input>
                 <label style={{marginLeft:"41px"}}>Age</label>
                 <input type="text" placeholder="00/00/0000" class="inputData100"></input>
             </div>

@@ -1,3 +1,6 @@
+020925 Mercantus(0.14)  : Added global variable for use across all components
+                        : Added more variables and access to allow for account creation
+                          BUG: Global var is always 1 char short
 020825 Ascension(0.14.0): Updated Char creation screen UI
                           Added ability to name char
 020725 Ascension(0.13.2): Updated skills selection and logic for changing selections

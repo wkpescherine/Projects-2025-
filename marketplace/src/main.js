@@ -24,10 +24,6 @@ function Main() {
     //    navigate('./')
     //}
 
-    //function RedirectToDCreate(){
-    //    navigate('./dcreate')
-    //}
-
     function RedirectToCreateAccount(){ navigate('./create')}
 
     function RedirectUnderDev(){
@@ -52,7 +48,7 @@ function Main() {
                 <button class='invertButton' onClick={RedirectUnderDev}>Login</button> 
                 <button class='invertButton' onClick={RedirectToCreateAccount}>Create Account</button>
             </p>
-            <p>version 0.13</p>
+            <p>version 0.14</p>
         </div>
     ); 
 }

@@ -11,6 +11,10 @@ h1 {
   font-size: 24px;
 }
 
+h5 {
+  color:#ffdf00;
+}
+
 label {
   color: #ffdf00;
   padding-left: 10px;

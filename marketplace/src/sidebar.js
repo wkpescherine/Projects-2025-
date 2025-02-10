@@ -10,11 +10,7 @@ function Sidebar(props) {
     }
 
     return (
-        <div style={{justifyContent: "center", 
-                    width: "200px", 
-                    backgroundColor:"#333",
-                    paddingTop: "50px", 
-                    height: "500px"}}>
+        <div style={{justifyContent: "center", width: "200px", backgroundColor:"#333", paddingTop: "50px", height: "500px"}}>
             <button class="invertButton" onClick={() => props.getData("Home")}>Home</button> 
             <br></br>
             <button class='invertButton' onClick={() => props.getData("Profile")}>Profile</button> 
