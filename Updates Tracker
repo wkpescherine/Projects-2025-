@@ -1,3 +1,4 @@
+021025 General          : NO UPDATES
 020925 Mercantus(0.14)  : Added global variable for use across all components
                         : Added more variables and access to allow for account creation
                           BUG: Global var is always 1 char short
