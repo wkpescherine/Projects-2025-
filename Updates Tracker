@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 021125 Mercantus(0.15)  : Reviewing issue with input bug/global vars
                           (FIXED)BUG: Global var is always 1 char short
 021025 Mercantus(0.14)  : Added global variable for use across all components
+=======
+021025 General          : NO UPDATES
+020925 Mercantus(0.14)  : Added global variable for use across all components
+>>>>>>> d6866906c2415f738c485b04a42ab7a6ac64a9bd
                         : Added more variables and access to allow for account creation
                           BUG: Global var is always 1 char short
 020925 General          : NO UPDATES
