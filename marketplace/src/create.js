@@ -18,17 +18,14 @@ function PCreate() {
     
     const handleLogInUsernameChange = (event) => {
         setLogInUsername(event.target.value)
-        setGlobalVarUsername(logInUsername)
     }
 
     const handleLogInPasswordChange = (event) => {
         setLogInPassword(event.target.value)
-        setGlobalVarPassword(logInPassword)
     }
 
     const handleLogInEmailChange = (event) => {
         setLogInEmail(event.target.value)
-        setGlobalVarEmail(logInEmail)
     }
 
     const handleCellNumChange = (event) => {
@@ -40,7 +37,11 @@ function PCreate() {
     }
 
     function RedirectToDashboard(){
+        setGlobalVarEmail(logInEmail)
+        setGlobalVarUsername(logInUsername)
+        setGlobalVarPassword(logInPassword)
         console.log(globalVarUsername)
+        console.log(globalVarEmail)
         navigate('/dashboard')
     }
     

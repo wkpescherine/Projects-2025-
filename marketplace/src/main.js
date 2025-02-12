@@ -1,12 +1,12 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import './App.css';
 import {useNavigate} from 'react-router-dom'
-
-//import Users from "./usersDB.json"
-//import Docters from "./doctorDB.json"
-
+import MyContext from './myContext';
 
 function Main() {
+    const {globalVarUsername, setGlobalVarUsername} = useContext(MyContext);
+    const {globalVarEmail, setGlobalVarEmail} = useContext(MyContext);
+    const {globalVarPassword, setGlobalVarPassword} = useContext(MyContext);
     const[logInUsername,setLogInUsername] = useState ("");
     const[logInPassword,setLogInPassword] = useState ("");
 
@@ -24,10 +24,14 @@ function Main() {
     //    navigate('./')
     //}
 
-    function RedirectToCreateAccount(){ navigate('./create')}
+    function RedirectToCreateAccount(){ 
+        setGlobalVarEmail("")
+        setGlobalVarUsername("")
+        navigate('./create')
+    }
 
     function RedirectUnderDev(){
-        if((logInUsername === "Test") && (logInPassword=== "Test@01")){
+        if((logInUsername === globalVarUsername) && (logInPassword=== globalVarPassword)){
             navigate('./dashboard')
         }
     }
@@ -48,7 +52,7 @@ function Main() {
                 <button class='invertButton' onClick={RedirectUnderDev}>Login</button> 
                 <button class='invertButton' onClick={RedirectToCreateAccount}>Create Account</button>
             </p>
-            <p>version 0.14</p>
+            <p>version 0.15</p>
         </div>
     ); 
 }
