@@ -8,6 +8,7 @@ import AccountCreate from "./create"
 import MyContext from './myContext';
 import { useState } from 'react';
 
+
 function App() {
   const [globalVarUsername, setGlobalVarUsername] = useState("");
   const [globalVarPassword, setGlobalVarPassword] = useState("");
