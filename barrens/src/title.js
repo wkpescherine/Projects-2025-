@@ -91,7 +91,7 @@ function Title() {
             {
                 createAccount!=="" && <button>Clear</button>
             }
-            <p>version 0.8</p>
+            <p>version 0.9</p>
         </div>
     );
 }

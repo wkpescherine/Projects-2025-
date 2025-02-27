@@ -1,18 +1,16 @@
-import { useState } from 'react';
+import { useState , useContext} from 'react';
 
 import Home from "./home"
 import Adventure from "./adventure"
+import MyContext from "./myContext"
 
-function Actionport(props){
-    const[actionPortView, setActionPortView] = useState("home") 
+function Actionport(){
+    const {globalActionPort, setGlobalActionPort} = useContext(MyContext);
 
-    const handleViewChange = (data) => {
-        setActionPortView(data)
-    }
     return(
         <div style={{width:"400px", background:"#999", margin:"5px"}}>
-            {actionPortView === "home" && <Home getData={handleViewChange}/>}
-            {actionPortView === 'adventure' && <Adventure />}
+            {globalActionPort === "Home" && <Home/>}
+            {globalActionPort === "Adventure" && <Adventure/>}
         </div>
     );
 }

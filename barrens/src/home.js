@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 //import ReactDOM from 'react-dom/client';
 import './index.css';
 
@@ -6,9 +6,11 @@ import CreateChar from "./charcreate"
 import HomeInfo from "./homeinfo"
 import LoadChar from "./loadchar"
 import DelChar from "./delchar"
+import MyContext from "./myContext"
 
-function Home(props){
+function Home(){
     const[homeView,setHomeView] = useState ("home");
+    const {globalActionPort, setGlobalActionPort} = useContext(MyContext)
 
     function setActionCreate(){
         if(homeView=="create"){
@@ -34,12 +36,7 @@ function Home(props){
     }
     
     function setActionStart(){
-        if(homeView=="start"){
-            setHomeView("home")
-        }else{
-            setHomeView("start")
-            props.getData("adventure")
-        } 
+        setGlobalActionPort("Adventure")
     }
     
     return(
