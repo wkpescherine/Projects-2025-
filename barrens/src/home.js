@@ -2,7 +2,7 @@ import React, {useState, useContext} from 'react';
 //import ReactDOM from 'react-dom/client';
 import './index.css';
 
-import CreateChar from "./charcreate"
+import CreateChar from "./components/actioncomps/charcreate"
 import HomeInfo from "./homeinfo"
 import LoadChar from "./loadchar"
 import DelChar from "./delchar"
