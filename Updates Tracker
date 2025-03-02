@@ -1,3 +1,7 @@
+030125 Barren(0.12)     : Update roles selection for char
+                        : Added more Roles to game
+                        : Added statsbonus logic to creation
+                        Issue: The bonus and rerender is not working well
 022825 Barren(0.11)     : Added char stats randomization to creation view
                         : Added Class choices to creation view
 022725 Barren(0.10)     : Added Character View
