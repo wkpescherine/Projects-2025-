@@ -1,3 +1,6 @@
+030325 Barren(0.13)     : Added more roles to game 
+                        : Have temporray fix for issue
+                        Issue: The bonus and rerender is not working well
 030125 Barren(0.12)     : Update roles selection for char
                         : Added more Roles to game
                         : Added statsbonus logic to creation

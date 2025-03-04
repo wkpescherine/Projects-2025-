@@ -2,7 +2,7 @@ import React, {useState, useContext} from 'react';
 //import ReactDOM from 'react-dom/client';
 import './index.css';
 
-import CreateChar from "./components/actioncomps/charcreate"
+import CreateChar from "./charcreate"
 import HomeInfo from "./homeinfo"
 import LoadChar from "./loadchar"
 import DelChar from "./delchar"
@@ -41,14 +41,14 @@ function Home(){
     
     return(
         <div style={{justifyContent:"center"}}>
-            {homeView === "create" && <CreateChar/>}
-            {homeView === "home" && <HomeInfo/>}
-            {homeView === "delete" && <DelChar/>}
-            {homeView === "load" && <LoadChar/>}
             <button style={{width: "100px"}} onClick={setActionCreate}>Create Character</button>
             <button style={{width: "100px"}} onClick={setActionLoad}>Load Character</button>
             <button style={{width: "100px"}} onClick={setActionDelete}>Delete Character</button>
             <button style={{width: "100px"}} onClick={setActionStart}>Start <br></br> Game</button>
+            {homeView === "create" && <CreateChar/>}
+            {homeView === "home" && <HomeInfo/>}
+            {homeView === "delete" && <DelChar/>}
+            {homeView === "load" && <LoadChar/>}
         </div>
     )
 }

@@ -9,6 +9,7 @@ import MyContext from './myContext';
 
 function App() {
   const [globalActionPort, setGlobalActionPort] = useState("Home");
+  const [globalStatBonus, setGlobalStatBonus] = useState([0,0,0,0,0,0])
   
   return (
     <MyContext.Provider value={{globalActionPort,setGlobalActionPort}}>
