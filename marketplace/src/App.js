@@ -10,8 +10,8 @@ import { useState } from 'react';
 
 
 function App() {
-  const [globalVarUsername, setGlobalVarUsername] = useState("");
-  const [globalVarPassword, setGlobalVarPassword] = useState("");
+  const [globalVarUsername, setGlobalVarUsername] = useState("Test");
+  const [globalVarPassword, setGlobalVarPassword] = useState("tester");
   const [globalVarEmail, setGlobalVarEmail] = useState("");
 
   return (

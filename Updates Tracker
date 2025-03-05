@@ -1,3 +1,7 @@
+030425 Mercantus(0.16)  : Updated Profile Page
+                        : Updated Market Page
+                        : Updated Vault Page
+                        : Added buy/sell components in Market
 030325 Barren(0.13)     : Added more roles to game 
                         : Have temporray fix for issue
                         Issue: The bonus and rerender is not working well
