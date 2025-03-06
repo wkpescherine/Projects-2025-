@@ -6,11 +6,25 @@
   width: 100px;
 }
 
+.bankbones{
+  width: 25px;
+}
+
+.headerText{
+  color:#ffdf00;
+  font-size: 18px;
+}
+
+.headerSubText{
+  color:#ffdf00;
+  font-size: 12px;
+}
+
 p {
   color:#ffdf00;
 }
 
-h1 {
+h1, h3 {
   color:#ffdf00;
   font-size: 24px;
 }

@@ -2,6 +2,7 @@ import Profile from "./profile"
 import Portfolio from "./portfolio"
 import Home from "./home"
 import Market from "./market"
+import Exchange from "./exchange"
 import Bank from "./bank"
 import Vault from "./vault"
 import Settings from "./settings"
@@ -14,6 +15,7 @@ function Display(props) {
             {props.sendData==="Profile" && <Profile/>}
             {props.sendData==="Portfolio" && <Portfolio/>}
             {props.sendData==="Market" && <Market />}
+            {props.sendData==="Exchange" && <Exchange />}
             {props.sendData==="Bank" && <Bank />}
             {props.sendData==="Vault" && <Vault />}
             {props.sendData==="Settings" && <Settings />}

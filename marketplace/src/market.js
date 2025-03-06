@@ -1,5 +1,4 @@
-import BuyComp from "./customElements/buycomp"
-import SellComp from "./customElements/sellcomp"
+import Marketcoin from "./customElements/marketcoin"
 
 function Market (){
     return(
@@ -8,15 +7,11 @@ function Market (){
                 <h1>Market</h1>
             </div>
             <div style={{display:"flex", justifyContent:"center"}}>
-                <div style={{width:"100px", color:"#ffdf00"}}>Coin</div>
-                <div style={{width:"100px", color:"#ffdf00"}}>Bone cost</div>
-                <div style={{width:"100px", color:"#ffdf00"}}>Quantity</div>
-                <div style={{width:"100px", color:"#ffdf00"}}>Action</div>
+                <div style={{width:"100px", color:"#ffdf00"}}>Coin Type</div>
+                <div style={{width:"100px", color:"#ffdf00"}}>Price (B)</div>
+                <div style={{width:"100px", color:"#ffdf00"}}>Size</div>
             </div>
-            <div>
-                <BuyComp />
-                <SellComp />
-            </div>
+            <Marketcoin />
         </div>
     )
 }
