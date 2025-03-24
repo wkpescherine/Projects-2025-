@@ -1,9 +1,14 @@
 package ascension.v0;
 
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.*;
+
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 public class CreateChar implements ActionListener{
     SkillSelection skillselection = new SkillSelection();
@@ -31,6 +36,8 @@ public class CreateChar implements ActionListener{
     JButton priest = new JButton("Priest");
     JButton ranger = new JButton("Ranger");
     JButton paladin = new JButton("Paladin");
+    JButton archmage = new JButton("ArchMage");
+    JButton cleric = new JButton("Cleric");
     JTextField charName = new JTextField();
     JPanel style = new JPanel();
     JPanel race = new JPanel();
@@ -182,6 +189,8 @@ public class CreateChar implements ActionListener{
         role.add(paladin);
         role.add(priest);
         role.add(ranger);
+        role.add(archmage);
+        role.add(cleric);
         warrior.addActionListener(
             new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
@@ -228,6 +237,24 @@ public class CreateChar implements ActionListener{
                 }
             });
         priest.addActionListener(
+            new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    buttonName = ((JButton) e.getSource()).getText();
+                    GameConfig.handleRoleChoice(buttonName);
+                    GameConfig.role = buttonName;
+                    updateSheet();
+                }
+            });
+        archmage.addActionListener(
+            new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    buttonName = ((JButton) e.getSource()).getText();
+                    GameConfig.handleRoleChoice(buttonName);
+                    GameConfig.role = buttonName;
+                    updateSheet();
+                }
+            });
+        cleric.addActionListener(
             new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     buttonName = ((JButton) e.getSource()).getText();
