@@ -3,10 +3,11 @@ package ascension.v0;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
 import javax.swing.JFrame;
 
 public class Ascension implements ActionListener{
-    JFrame window = new JFrame("Ascension v0.15.1");
+    JFrame window = new JFrame("Ascension v0.16.3");
     Start start = new Start();
     Saved saved = new Saved();
     Game game = new Game();
@@ -18,7 +19,7 @@ public class Ascension implements ActionListener{
         // Can start to remove the different sections out
         // Will just use this as the main interface for the screen loading
 
-        // START GAME SCREEN SWITCHIUNG
+        // START GAME SCREEN SWITCHING
         start.start.setBounds(0, 0, 1000, 750);
         start.begin.addActionListener(this);
         start.saved.addActionListener(
@@ -28,7 +29,7 @@ public class Ascension implements ActionListener{
                         renderScreen();
                     }
                 }); 
-        // SAVED GANE SCREEN SWITCHING
+        // SAVED GAME SCREEN SWITCHING
         saved.saved.setBounds(0, 0, 1000, 750);
         saved.back.addActionListener(
                 new ActionListener() {
@@ -60,9 +61,8 @@ public class Ascension implements ActionListener{
                         renderScreen();
                     }
                 });
-        /*
-        // GAME SCREEN SWITCHING
-        game.game.setBounds(0, 0, 1990, 750);
+        //GAME SCREEN SWITCHING
+        game.game.setBounds(0, 0, 1000, 750);
         game.exit.addActionListener(
                 new ActionListener() {
                     public void actionPerformed(ActionEvent e) {
@@ -70,7 +70,7 @@ public class Ascension implements ActionListener{
                         renderScreen();
                     }
                 });
-        */
+
         window.add(start.start);
         window.add(saved.saved);
         window.add(create.create);

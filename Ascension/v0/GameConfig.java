@@ -2,7 +2,9 @@ package ascension.v0;
 
 import java.awt.Dimension;
 import java.awt.FlowLayout;
-import javax.swing.*;
+
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 
 public class GameConfig {
     public static String state = "MAIN";
@@ -74,6 +76,18 @@ public class GameConfig {
                 break;
             case "Quick":
                 int[] quickStyle = {0,2,4,0,0,0,0,0,0};
+                styleTempValues = quickStyle;
+                statsTally();
+                bonusCheck();
+                break;
+            case "Sturdy":
+                int[] sturdyStyle = {2,0,0,0,0,4,0,0,0};
+                styleTempValues = quickStyle;
+                statsTally();
+                bonusCheck();
+                break;
+            case "Diabolic":
+                int[] diabolicStyle = {0,0,1,5,0,0,0,0,0};
                 styleTempValues = quickStyle;
                 statsTally();
                 bonusCheck();

@@ -23,6 +23,8 @@ public class CreateChar implements ActionListener{
     JButton nimble = new JButton("Nimble");
     JButton tough = new JButton("Tough");
     JButton pious = new JButton("Pious");
+    JButton sturdy = new JButton("Sturdy");
+    JButton diabolic = new JButton("Diabolic");
     JButton quick = new JButton("Quick");
     JButton human = new JButton("Human");
     JButton dwarven = new JButton("Dwarven");
@@ -69,6 +71,8 @@ public class CreateChar implements ActionListener{
         style.add(tough);
         style.add(pious);
         style.add(quick);
+        style.add(sturdy);
+        style.add(diabolic);
         savage.addActionListener(this);
         wise.addActionListener(
             new ActionListener() {
@@ -107,6 +111,24 @@ public class CreateChar implements ActionListener{
                 }
             });
         quick.addActionListener(
+            new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    buttonName = ((JButton) e.getSource()).getText();
+                    GameConfig.handleStyleChoice(buttonName);
+                    GameConfig.style = buttonName;
+                    updateSheet();
+                }
+            });
+        sturdy.addActionListener(
+            new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    buttonName = ((JButton) e.getSource()).getText();
+                    GameConfig.handleStyleChoice(buttonName);
+                    GameConfig.style = buttonName;
+                    updateSheet();
+                }
+            });
+        diabolic.addActionListener(
             new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     buttonName = ((JButton) e.getSource()).getText();
