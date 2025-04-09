@@ -1,0 +1,13 @@
+040925 POC(0.8)         : Continued to update and expand application
+033125 TruCare(0.27)    : Updated general version
+                        : Updated Patient creation
+                        : Cleaning up various componenents
+032625 Ascension(0.16.0): Added more skills to creation screen
+                        : Added more styles to creation screen
+                        : Added Exit to game functionality
+032025 Mystika(0.2)     : Added Local Storage
+031225 General          : Was working on some CPP itmes
+030625 Mercantus(0.18)  : Worked on API
+030325 Barren(0.13)     : Added more roles to game 
+                        : Have temporray fix for issue
+                        Issue: The bonus and rerender is not working well
