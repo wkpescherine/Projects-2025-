@@ -41,14 +41,14 @@ function Home(){
     
     return(
         <div style={{justifyContent:"center"}}>
-            <button style={{width: "100px"}} onClick={setActionCreate}>Create Character</button>
-            <button style={{width: "100px"}} onClick={setActionLoad}>Load Character</button>
-            <button style={{width: "100px"}} onClick={setActionDelete}>Delete Character</button>
-            <button style={{width: "100px"}} onClick={setActionStart}>Start <br></br> Game</button>
             {homeView === "create" && <CreateChar/>}
             {homeView === "home" && <HomeInfo/>}
             {homeView === "delete" && <DelChar/>}
             {homeView === "load" && <LoadChar/>}
+            <button style={{width: "100px"}} onClick={setActionCreate}>Create Character</button>
+            <button style={{width: "100px"}} onClick={setActionLoad}>Load Character</button>
+            <button style={{width: "100px"}} onClick={setActionDelete}>Delete Character</button>
+            <button style={{width: "100px"}} onClick={setActionStart}>Start <br></br> Game</button>
         </div>
     )
 }

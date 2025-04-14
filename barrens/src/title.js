@@ -11,7 +11,7 @@ function Title() {
     const[logInPassword,setLogInPassword] = useState ("");
     const[createAccount,setCreateAccount] = useState ("");
     const[logInMessage,setLogInMessage] = useState("");
-    const[subMonth,setSubMonth] = useState (2);
+    const[subMonth,setSubMonth] = useState (5);
     const[subDate,setSubDate] = useState (31);
     const[subYear,setSubYear] = useState (2025);
 
@@ -54,7 +54,7 @@ function Title() {
     }
 
     function RedirectUnderDev(){
-        if((logInUsername === "Test") && (logInPassword=== "Test@01")){
+        if((logInUsername === "Test") && (logInPassword=== "Test")){
             validateAccount();
         } else {
             setLogInMessage("No account found please create one")
@@ -91,7 +91,7 @@ function Title() {
             {
                 createAccount!=="" && <button>Clear</button>
             }
-            <p>version 0.13</p>
+            <p>version 0.14</p>
         </div>
     );
 }

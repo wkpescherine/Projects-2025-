@@ -1,3 +1,8 @@
+041325 Barren(0.14)     : Added more roles to game 
+                        : Added more char stats
+                        : Added char naming
+                        : Changed layout on Home and creation screens
+                        Issue: The bonus and rerender is not working well(Accepted)
 041025 POC(0.9)         : Continued to update and expand application
 040925 POC(0.8)         : Continued to update and expand application
 040825 POC(0.7)         : Continued to update and expand application

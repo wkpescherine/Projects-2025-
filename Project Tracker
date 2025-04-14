@@ -1,3 +1,8 @@
+041325 Barren(0.14)     : Added more roles to game 
+                        : Added more char stats
+                        : Added char naming
+                        : Changed layout on Home and creation screens
+                        Issue: The bonus and rerender is not working well(Accepted)
 041025 POC(0.9)         : Continued to update and expand application
 033125 TruCare(0.27)    : Updated general version
                         : Updated Patient creation
@@ -8,6 +13,3 @@
 032025 Mystika(0.2)     : Added Local Storage
 031225 General          : Was working on some CPP itmes
 030625 Mercantus(0.18)  : Worked on API
-030325 Barren(0.13)     : Added more roles to game 
-                        : Have temporray fix for issue
-                        Issue: The bonus and rerender is not working well
