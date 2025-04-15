@@ -1,12 +1,12 @@
+041425 TruCare(0.28)    : Updated Account Screen 
+                        : Split account screen based on Patient/Doctor
+                        : Adding basic setup for API
 041325 Barren(0.14)     : Added more roles to game 
                         : Added more char stats
                         : Added char naming
                         : Changed layout on Home and creation screens
                         Issue: The bonus and rerender is not working well(Accepted)
 041025 POC(0.9)         : Continued to update and expand application
-033125 TruCare(0.27)    : Updated general version
-                        : Updated Patient creation
-                        : Cleaning up various componenents
 032625 Ascension(0.16.0): Added more skills to creation screen
                         : Added more styles to creation screen
                         : Added Exit to game functionality
