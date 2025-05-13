@@ -1,4 +1,4 @@
-050425 TruCare(0.28.3)  : Updating setup for API, adding rails
+051225 TruCare(0.28.4)  : Continued to build out the API
 041325 Barren(0.14)     : Added more roles to game 
                         : Added more char stats
                         : Added char naming
@@ -10,6 +10,4 @@
                         : Added Exit to game functionality
 032025 Mystika(0.2)     : Added Local Storage
 031225 General          : Was working on some CPP itmes
-030625 Mercantus(0.18)  : Worked on APIrails -v
-gem install pg -v '0.18.4' -- --with-cflags="-Wno-error=implicit-function-declaration"
-
+030625 Mercantus(0.18)  : Worked on API
