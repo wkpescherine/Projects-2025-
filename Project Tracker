@@ -1,11 +1,11 @@
-060125 Rails(1.2)       : Working on Rails skills and improvement
+060225 Rails(1.3)       : Working on Rails skills and improvement
 051825 Mercantus(0.18.1): Updating rails API
 051225 TruCare(0.28.4)  : Continued to build out the API
 041325 Barren(0.14)     : Added more roles to game 
                         : Added more char stats
                         : Added char naming
                         : Changed layout on Home and creation screens
-                  Issue: The bonus and rerender is not working well(Accepted)
+                              Issue: The bonus and rerender is not working well(Accepted)
 041025 POC(0.9)         : Continued to update and expand application
 032625 Ascension(0.16.0): Added more skills to creation screen
                         : Added more styles to creation screen
