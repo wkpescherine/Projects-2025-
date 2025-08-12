@@ -23,4 +23,9 @@ public class Home extends AppCompatActivity {
         Intent Quit = new Intent(this, MainActivity.class);
         startActivity(Quit);
     }
+
+    public void Map(View v){
+        Intent WorldMap = new Intent(this, WorldMap.class);
+        startActivity(WorldMap);
+    }
 }
