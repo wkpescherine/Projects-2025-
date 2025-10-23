@@ -69,6 +69,8 @@ function PCreate() {
                     <input style={{width:"50px", background:"#fff"}} type="text" placeholder="Zip Code"></input>
                 </div>
                 <div>
+                    <label>SS#</label> 
+                    <input style={{width:"125px", background:"#fff"}} type="text" placeholder="(000)000-0000"  onChange={handleCellNumChange}></input>
                     <label>Cell#</label> 
                     <input style={{width:"125px", background:"#fff"}} type="text" placeholder="(000)000-0000"  onChange={handleCellNumChange}></input>
                 </div>
@@ -85,6 +87,23 @@ function PCreate() {
                     <button>Psychiatrist</button>
                     <button>Trainer</button>
                     <button>Dietion</button>
+                </div>
+                <hr style={{background:"#fff", height: "1px", width: "550px"}}/>
+                <p style={{margin:"5px"}}>Expected Visits(per year):</p>
+                <hr style={{background:"#fff", height: "1px", width: "550px"}}/>
+                <div>
+                    <label>
+                        <input type="radio" value="normal"/>Once
+                    </label>
+                    <label>
+                        <input type="radio" value="normal"/>2-4
+                    </label>
+                    <label>
+                        <input type="radio" value="normal"/>5-10 
+                    </label>
+                    <label>
+                        <input type="radio" value="normal"/>11+
+                    </label>
                 </div>
                 <hr style={{background:"#fff", height: "1px", width: "550px"}}/>
                 <p style={{margin:"5px"}}>Rate of Coverage:</p>
@@ -108,6 +127,9 @@ function PCreate() {
                 </div>
                 <hr style={{background:"#fff", height: "1px", width: "550px"}}/>                
             </div>
+                <hr style={{background:"#fff", height: "1px", width: "550px"}}/>
+                <p style={{margin:"5px"}}>Preview Coverage</p>
+                <hr style={{background:"#fff", height: "1px", width: "550px"}}/>
             <p>
                 <button class='invertButton' onClick={RedirectToExit}>Exit</button> 
                 <button class='invertButton' onClick={RedirectToDashboard}>Create</button>  
