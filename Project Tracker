@@ -1,4 +1,5 @@
-051225 TruCare(0.29.4)  : Update to Patient Creation
+102325 Trucare(0.30.4)  : Added doctor displaying to the search section
+                        : Updated some logic in Search section to handle doctor searching
 081125 Mystika(0.3)     : Added World Map
                         : Increased functionality
 072125 Rails(2.1)       : Review and documentation
