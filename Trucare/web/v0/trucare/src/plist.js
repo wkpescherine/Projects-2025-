@@ -1,4 +1,5 @@
 import './App.css';
+import Patient from "./patients"
 
 function PList() {
     return (
@@ -13,6 +14,7 @@ function PList() {
                 <p style={{width:"100px", fontSize:"12px"}}>Action</p>
             </div>
             <hr style={{background:"#fff", height: "1px", width: "500px"}}/>
+            <Patient/>
         </div>
     ); 
 }

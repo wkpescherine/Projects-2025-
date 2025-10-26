@@ -1,12 +1,12 @@
-102325 Trucare(0.30.4)  : Added doctor displaying to the search section
-                        : Updated some logic in Search section to handle doctor searching
+102525 Trucare(0.31.4)  : Added patients displaying to the plist section
+                        : Added patients individual
 081125 Mystika(0.3)     : Added World Map
                         : Increased functionality
 072125 Rails(2.1)       : Review and documentation
 070625 Ironman(0.8)     : Basic UI updates
                           Added Login
                           Basic Dashboard
-                          Basic Events screen060425 
+                          Basic Events
 051825 Mercantus(0.18.1): Updating rails API
 041325 Barren(0.14)     : Added more roles to game 
                         : Added more char stats
