@@ -1,4 +1,7 @@
-102325 Trucare(0.31.4)  : Added doctor displaying to the search section
+102625 Trucare(0.32.4)  : Updated Doctor search UI
+                        : Updated Billing UI
+                        : Updated Billing to include an options for selecting procedure
+102525 Trucare(0.31.4)  : Added doctor displaying to the search section
                         : Updated some logic in Search section to handle doctor searching
 102325 Trucare(0.30.4)  : Added doctor displaying to the search section
                         : Updated some logic in Search section to handle doctor searching

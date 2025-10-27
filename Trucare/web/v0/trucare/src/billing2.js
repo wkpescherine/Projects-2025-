@@ -1,18 +1,6 @@
 import './App.css';
-import Dropdown from "./components/billing/dropdown"
 
 function Billing() {
-    const dropdownOptions = [
-        { value: 'apple', label: 'Apple' },
-        { value: 'banana', label: 'Banana' },
-        { value: 'orange', label: 'Orange' },
-    ];
-
-    const handleOptionSelection = (selected) => {
-        console.log('Selected option:', selected);
-        // Perform actions based on the selected option
-    };
-
     return (
         <div>
             <p>Billing Screen</p>
@@ -26,10 +14,21 @@ function Billing() {
             </div>
             <hr style={{background:"#fff", height: "1px", width: "500px"}}/>
             <div style={{display: "flex", height:"30px"}}>
-                <p style={{width: "75px", height:"25px", alignSelf:"center", fontSize: "14px"}}>Date</p>
+                <p style={{width: "75px", height:"25px", alignSelf:"center", fontSize: "14px"}}>Visit</p>
+                <input type='text' style={{width: "75px", height:"25px", alignSelf:"center", fontSize: "14px"}}></input>
+                <p style={{width: "75px", height:"25px", alignSelf:"center"}}>Medication</p>
+                <input type='text' style={{width: "75px", height:"25px", alignSelf:"center", fontSize: "14px"}}></input>
+                <p style={{width: "75px", height:"25px", alignSelf:"center"}}>Bloodwork</p>
                 <input type='text' style={{width: "75px", height:"25px", alignSelf:"center", fontSize: "14px"}}></input>
             </div>
-            <Dropdown options={dropdownOptions} onSelect={handleOptionSelection} />
+            <div style={{display: "flex", height:"30px"}}>
+                <p style={{width: "75px", height:"25px", alignSelf:"center", fontSize: "14px"}}>Cleaning</p>
+                <input type='text' style={{width: "75px", height:"25px", alignSelf:"center"}}></input>
+                <p style={{width: "75px", height:"25px", alignSelf:"center", fontSize: "14px"}}>Braces</p>
+                <input type='text' style={{width: "75px", height:"25px", alignSelf:"center"}}></input>
+                <p style={{width: "75px", height:"25px", alignSelf:"center"}}>Extraction</p>
+                <input type='text' style={{width: "75px", height:"25px", alignSelf:"center", fontSize: "14px"}}></input>
+            </div>
             <div style={{display: "flex", height:"30px"}}>
                 <p style={{width: "75px", height:"25px", alignSelf:"center", fontSize: "14px"}}>Other</p>
                 <input type='text' placeholder="Enter Code " style={{width: "150px", height:"25px", alignSelf:"center"}}></input>

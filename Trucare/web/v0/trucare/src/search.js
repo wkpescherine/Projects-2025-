@@ -36,7 +36,7 @@ function Search() {
                 <p style={{width:"100px", fontSize:"12px"}}>City</p>
                 <p style={{width:"50px", fontSize:"12px"}}>State</p>
                 <p style={{width:"100px", fontSize:"12px"}}>Zip Code</p>
-                <p style={{width:"55px", fontSize:"12px"}}></p>
+                <p style={{width:"55px", fontSize:"12px"}}>Action</p>
             </div>
             <hr style={{background:"#fff", height: "1px", width: "500px"}}/>
             <Doctor/>
