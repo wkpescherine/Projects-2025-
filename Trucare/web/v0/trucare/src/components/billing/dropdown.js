@@ -17,7 +17,7 @@ const Dropdown = ({ options, onSelect }) => {
       return (
         <div className="dropdown-container">
           <button className="dropdown-toggle" onClick={toggleDropdown}>
-            {selectedOption ? selectedOption.label : 'Select an option'}
+            {selectedOption ? selectedOption.label : 'Select Procedure'}
             {/* Add an icon for visual indication of dropdown state */}
           </button>
           {isOpen && (
@@ -25,6 +25,7 @@ const Dropdown = ({ options, onSelect }) => {
               {options.map((option) => (
                 <li key={option.value} onClick={() => handleOptionClick(option)}>
                   {option.label}
+                  :${option.cost}
                 </li>
               ))}
             </ul>

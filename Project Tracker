@@ -1,5 +1,5 @@
-102525 Trucare(0.32.4)  : Added patients displaying to the plist section
-                        : Added patients individual
+102725 Trucare(0.33.4)  : Updated the dropdown element for billing
+                        : Added a receipt section to billing
 081125 Mystika(0.3)     : Added World Map
                         : Increased functionality
 072125 Rails(2.1)       : Review and documentation

@@ -1,15 +1,23 @@
 import './App.css';
 import Dropdown from "./components/billing/dropdown"
+import Receipt from './components/billing/receipt';
 
 function Billing() {
     const dropdownOptions = [
-        { value: 'apple', label: 'Apple' },
-        { value: 'banana', label: 'Banana' },
-        { value: 'orange', label: 'Orange' },
+        { value: 'Visit', label: 'Visit', cost: 45 },
+        { value: 'Check-up', label: 'Check-Up', cost:25 },
+    ];
+
+    const dropdownResults = [
+        {value:0 , label:"None" , cost: "0"},
     ];
 
     const handleOptionSelection = (selected) => {
         console.log('Selected option:', selected);
+        console.log('Selected option:', selected.label);
+        console.log('Selected res:', dropdownResults.label);
+        dropdownResults.label = selected.label
+        console.log('Selected rec:', dropdownResults.label);
         // Perform actions based on the selected option
     };
 
@@ -38,6 +46,7 @@ function Billing() {
             </div>
             <p style={{width: "500px", height:"25px", alignSelf:"center", justifyContent:"center"}}>Current Cost $0</p>
             <hr style={{background:"#fff", height: "1px", width: "500px"}}/>
+            <Receipt options={dropdownResults} onSelect={handleOptionSelection} />
             <div style={{display: "flex", justifyContent: "center" }}>
                 <button>Evaluate</button>
                 <button>Save</button>

@@ -123,3 +123,7 @@ label {
   width: 200px;
   background-color: #fff;
 }
+
+.dropdown-menu {
+  background-color: #fff;
+}
